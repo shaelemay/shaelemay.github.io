@@ -1,9 +1,5 @@
 body {
     background-color: lightblue;
-    img {
-      max-width: 100%;
-      object-fit: contain;
-  }
   }
   
   h1 {

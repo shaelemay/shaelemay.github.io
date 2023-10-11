@@ -31,6 +31,7 @@ li a:hover {
   }
 
 .flex_me {
+    width: 100vw;
     min-height: 640px;
     display:flex;
     position:relative;
@@ -38,6 +39,7 @@ li a:hover {
   }
 
 .flex_me .left{
+    min-width: 0;
     font-family: "Gabarito", sans-serif;
     font-size:55px;
     font-weight:600;
@@ -47,6 +49,7 @@ li a:hover {
 }
 
 .flex_me .right{
+    min-width:0;
     flex:40%;
     padding:50px;
     background-color: rgb(220, 234, 245);
@@ -54,4 +57,11 @@ li a:hover {
 
 .navbar {
     margin-bottom: 30px;
+}
+ .flex_me img { 
+    object-fit: contain;
+}
+
+.flex_me .left img {
+    max-width: 50%;
 }

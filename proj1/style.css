@@ -1,0 +1,57 @@
+* { padding: 0; margin: 0; }
+
+@font-face {
+    font-family: 'Gabarito';
+    src: url(Gabarito.woff2) format('woff2');
+   }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a0a0a0;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+  }
+
+.flex_me {
+    min-height: 640px;
+    display:flex;
+    position:relative;
+    
+  }
+
+.flex_me .left{
+    font-family: "Gabarito", sans-serif;
+    font-size:55px;
+    font-weight:600;
+    flex:60%;
+    padding:50px;
+    background-color: beige;
+}
+
+.flex_me .right{
+    flex:40%;
+    padding:50px;
+    background-color: rgb(220, 234, 245);
+}
+
+.navbar {
+    margin-bottom: 30px;
+}

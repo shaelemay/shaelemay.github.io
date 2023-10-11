@@ -5,30 +5,46 @@ img {
 }
 
 body {
+  font-size:20px;
   margin:0;
   background-color:antiquewhite;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 .number {
-  font-size: 60px;
+  font-size: 3rem;
   font-weight:bold;
   position:absolute;
 }
+
 .minute {
   position:absolute;
-  border: 1px solid black;
-  top:48%;
-  left:48%;
-  height:50%;
-}
-.hour {
-  position:absolute;
-  top:48%;
-  left:48%;
-  border:1px solid black;
-  width:50%;
+  top:49%;
+  left:49%;
+  height:49%;
+  animation-name: rotate;
+  animation-duration:10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin:top center;
+  transform:rotate(0deg);
 }
 
+.hour {
+  position:absolute;
+  top:47.5%;
+  left:50%;
+  animation-name: rotate;
+  animation-duration:60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin:left center;
+  transform:rotate(0deg);
+}
+
+@keyframes rotate{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
 main {
   width:50%;
   /* this makes the contents hve an 80px margin on top and bottom, and an auto margin on left and right which centers the content. */
@@ -39,15 +55,14 @@ main {
 }
 .clock {
   width:100%;
+  margin-bottom: -5px;
 }
 
 .minute img {
-  width:20px;
   height:75%;
 }
 .hour img {
   width:50%;
-  height:20px;
 }
 .one {
   top: 9%;
@@ -96,4 +111,9 @@ main {
 .twelve {
   top:3%;
   left:43%;
+}
+
+@keyframes example{
+  from {background-color: yellow;}
+  to {background-color: red;}
 }

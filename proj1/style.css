@@ -5,6 +5,11 @@
     src: url(Gabarito.woff2) format('woff2');
    }
 
+   @font-face {
+    font-family: 'Barlow';
+    src: url(Barlow.woff2) format('woff2');
+   }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -78,3 +83,44 @@ svg {
     width:30px;
     height:30px;
 }
+
+.flex {
+  width: 100vw;
+  min-height: 640px;
+  display:flex;
+  position:relative;
+}
+
+ .flex .info{
+  min-width: 0;
+  font-family: "Gabarito", sans-serif;
+  font-size:55px;
+  font-weight:600;  
+  flex:40%;
+  padding:50px;
+  background-color: beige;
+}
+
+ .flex .pkmn-image{
+  min-width:0;
+  flex:60%;
+  padding:20px;
+  background-color: rgb(220, 234, 245);
+}
+
+.flex .pkmn-image .pkmn-image-bg:hover
+{
+  position:relative;  
+  transform: rotate(-30deg);
+}
+
+
+ .flex p {
+  min-width: 0;
+  font-family: "Barlow", sans-serif;
+  font-size:24px;
+  font-weight:600;
+  flex:60%;
+  background-color: beige;
+ }
+

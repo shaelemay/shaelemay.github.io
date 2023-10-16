@@ -32,7 +32,7 @@ li a {
   
   /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #ccc;
   }
 
 .flex_me {
@@ -101,18 +101,37 @@ svg {
   background-color: beige;
 }
 
- .flex .pkmn-image{
-  min-width:0;
+ .flex .image{
+  position:relative;
   flex:60%;
   padding:20px;
   background-color: rgb(220, 234, 245);
+  /* on hover, rotate bg blob */
 }
 
-.flex .pkmn-image .pkmn-image-bg:hover
+.flex .image .pkmn-image{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  position:absolute;
+  object-fit:scale-down;
+  
+}
+
+.flex .image .pkmn-image-bg{
+  top: 50%;
+  left: 50%;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  max-width:70%;
+  max-height:70%;
+}
+
+.flex .image .pkmn-image-bg:hover
 {
-  position:relative;  
+  position: inherit;
   transform: rotate(-15deg);
-  object-fit:cover;
 }
 
 

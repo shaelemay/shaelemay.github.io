@@ -111,7 +111,8 @@ svg {
 .flex .pkmn-image .pkmn-image-bg:hover
 {
   position:relative;  
-  transform: rotate(-30deg);
+  transform: rotate(-15deg);
+  object-fit:cover;
 }
 
 

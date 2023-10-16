@@ -1,0 +1,23 @@
+--- BULBASAUR ---
+Seed Pokemon
+#001
+Grass Type
+It can go for days without eating a single morsel. In the bulb on its back, it stores energy. The seed on its back is filled with nutrients. The seed grows steadily larger as its body grows. While it is young, it uses the nutrients that are stored in the seed on its back in order to grow.
+
+--- CHARMANDER ---
+Lizard Pokemon
+#004
+Fire Type
+Even the newborns have flaming tails. Unfamiliar with fire, babies are said to accidentally burn themselves. The flame on its tail shows the strength of its life force. If it is weak, the flame also burns weakly. Its life would end if the flame were to go out.
+
+--- SQUIRTLE ---
+Tiny Turtle Pokemon
+#007
+Water Type
+The shell, which hardens soon after it is born, is resilient. If you poke it, it will bounce back out. 	Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. It hides in its shell to protect itself, then strikes back with spouts of water at every opportunity.
+
+--- PIKACHU ---
+Mouse Pokemon
+#025
+Electric Type
+It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you. This intelligent Pokémon roasts hard berries with electricity to make them tender enough to eat. When Pikachu meet, they'll touch their tails together and exchange electricity through them as a form of greeting.

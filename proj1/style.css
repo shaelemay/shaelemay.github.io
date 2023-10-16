@@ -16,7 +16,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #a0a0a0;
+    background-color: #ffffff;
   }
   
 li {
@@ -37,57 +37,28 @@ li a:hover {
   }
   
   h1 {
-    font-family: "Gabarito", sans-serif;
+    font-family: "Barlow", sans-serif;
+    font-size: 36px;
+    color: #303030;   
   }
 
   h2 {
-    
+    font-family: "Gabarito", sans-serif;
+  }
+
+  h3 {
     font-family: "Barlow", sans-serif;
+    font-size: 36px;
   }
   
   p {
+    padding-top: 10px;
     font-family: 'Inter', sans-serif;
+    font-size: 24px;
   }
-
-
-
-.flex_me {
-    width: 100vw;
-    min-height: 640px;
-    display:flex;
-    position:relative;
-    
-  }
-
-.flex_me .left{
-    min-width: 0;
-    font-size:55px;
-    font-weight:600;
-    flex:60%;
-    padding:50px;
-    background-color: beige;
-}
-
-.flex_me .right{
-    min-width:0;
-    flex:40%;
-    padding:50px;
-    background-color: rgb(220, 234, 245);
-}
 
 .navbar {
-    margin-bottom: 30px;
-}
- .flex_me img { 
-    object-fit: contain;
-}
-
-.flex_me .left img {
-    max-width: 50%;
-}
-
-.flex_me .right img {
-  max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .icon {
@@ -97,35 +68,41 @@ li a:hover {
 
 .flex {
   width: 100vw;
+  height: 10vh;
   min-height: 640px;
   display:flex;
   position:relative;
+  overflow:hidden;
 }
 
  .flex .info{
+  margin: 0 5px 0 10px;
+  border-radius: 30px;
   min-width: 0;
   font-size:55px;
   font-weight:600;  
   flex:40%;
   padding:50px;
-  background-color: beige;
 }
 
- .flex .image-container{
-  position:relative;
-  float:left;
+ .flex .image-container {
+  margin: 0 10px 0 5px;
+  border-radius: 30px;
+  align-items: center;
   flex:60%;
-  padding:20px;
   background-color: rgb(220, 234, 245);
 }
 
 .flex .image-container .pkmn-image-bg{
+  padding-top: 20px;
+  left: 50%;
   position:absolute;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .flex .image-container .pkmn-image{
+  left: 50%; 
   position:absolute;
   max-width: 100%;
   max-height: 100%;
@@ -154,6 +131,5 @@ li a:hover {
   font-size:24px;
   font-weight:600;
   flex:60%;
-  background-color: beige;
  }
 

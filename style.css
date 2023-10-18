@@ -1,11 +1,54 @@
+* { padding: 0; margin: 0; box-sizing: border-box;}
+
 body {
-    background-color: lightblue;
+    background-color: rgb(252, 212, 252);
   }
   
   h1 {
-    color: navy;
-    margin-left: 20px;
+    margin:auto;
+    text-align: center;
+    font-family: "Bavista Soulare";
+    font-size: 144px;
+    color: #303030;   
   }
+h2 {
+  text-align: center;
+  font-family: "Hanged Letters";
+  font-size: 64px;
+  padding: 25px;
+  color: #303030;   
+}
+
+.head {
+  display:flex;
+  height: 20vh;
+}
+
+.flex{
+  display:flex;
+  height: 65vh;
+}
+.left {
+  background-color: cornsilk;
+  border-radius: 25px;
+  flex:50%;
+
+  margin: 0 5px 0 10px;
+}
+.right {
+  background-color: cornsilk;
+  border-radius: 25px;
+  flex:50%;
+  margin: 0 10px 0 5px;
+  text-align: center;
+}
+
+p {
+  padding: 15px;
+  font-family: "Something Cute";
+  font-size: 24px;
+}
+
   img {
     width:100%;
     padding-left: 0px;
@@ -14,15 +57,51 @@ body {
     padding-right: 0px;
   }
 
-  .flex-me {
-    display:flex;
+  .right a:link, a:visited {
+    font-family: "Funky Fresh";
+    font-size: 36px;
+    background-color: rgb(252, 212, 252);
+    margin: 5px;
+    color: #303030;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border:4px solid #b612a0;
+    border-radius: 5px;
   }
-  .flex-me .left {
-    flex:10%;
-  } 
-  .flex-me .middle {
-    flex:80%;
-  } 
-  .flex-me .right {
-    flex:10%;
-  } 
+  
+  .right a:hover, a:active {
+    transition-duration: 0.4s;
+    background-color: rgb(138, 159, 255);
+  }
+
+  /* Fonts */
+
+  @font-face {
+    font-family: 'Bavista Soulare';
+    src:url('./fonts/Bavista_Soulare.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+   @font-face {
+    font-family: 'Hanged Letters';
+    src:url('./fonts/Hanged Letters.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+   @font-face {
+    font-family: 'Funky Fresh';
+    src:url('./fonts/FunkyFresh.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+   @font-face {
+    font-family: 'Something Cute';
+    src:url('./fonts/SomethingCute.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+   }

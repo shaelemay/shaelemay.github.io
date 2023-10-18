@@ -1,19 +1,6 @@
 * { padding: 0; margin: 0; box-sizing: border-box;}
 
 
-
-@font-face {
-    font-family: 'Gabarito';
-    src: url(Gabarito.woff2) format('woff2');
-    
-   }
-
-   @font-face {
-    font-family: 'Barlow';
-    src: url(Barlow.woff2) format('woff2');
-   }
-
-
    /* ---  NavBar  --- */
 
 ul {
@@ -71,14 +58,7 @@ li a:hover {
     font-size: 10px;
   }
 
-.navbar {
-    margin-bottom: 20px;
-}
-
-.icon {
-    width:30px;
-    height:30px;
-}
+/* ---  Flexbox things  --- */
 
 .flex {
   width: 100vw;
@@ -90,6 +70,7 @@ li a:hover {
 }
 
 .flex p {
+  display:flex;
   min-width: 0;
   font-size:24px;
   font-weight:600;
@@ -105,7 +86,7 @@ li a:hover {
   font-weight:600;  
   flex:40%;
   padding:50px;
-  overflow: hidden;
+  overflow: auto;
   
 }
 
@@ -135,7 +116,24 @@ li a:hover {
   max-height: 100%;
 }
 
+.flex .info .top {
+  padding: 0 0 50px 0;
+}
+
+.flex .info .bottom {
+  padding: 50px 0 0 0;
+}
+
 /* ---  Element Sizing  --- */
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.icon {
+    width:30px;
+    height:30px;
+}
 
 .welcome {
   text-align: left;
@@ -157,8 +155,9 @@ li a:hover {
   line-height: 60%;
   font-family: 'Barlow';
   font-weight: 500;
-  padding: 0;
+  padding-top: 20px;
   font-size: 24px;
+  color: #303030;   
 }
 
 .kantoreg {  
@@ -168,6 +167,7 @@ li a:hover {
   padding: 0;
   font-size: 100px;
   padding-bottom: 15px;
+  color: #303030;   
 }
 
 

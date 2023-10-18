@@ -1,5 +1,7 @@
 * { padding: 0; margin: 0; box-sizing: border-box;}
 
+
+
 @font-face {
     font-family: 'Gabarito';
     src: url(Gabarito.woff2) format('woff2');
@@ -12,10 +14,11 @@
    }
 
 
+   /* ---  NavBar  --- */
+
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 10px 0 10px;
     overflow: hidden;
     background-color: #ffffff;
   }
@@ -25,18 +28,22 @@ li {
   }
   
 li a {
+    border-radius: 15px;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  
-  /* Change the link color to #111 (black) on hover */
+
 li a:hover {
-    background-color: #ccc;
+    background-color: #303030;
+    transition-duration: 0.5s;
+    border-radius: 50px;
   }
   
+  /* ---  Type  --- */
+
   h1 {
     font-family: "Barlow", sans-serif;
     font-size: 36px;
@@ -58,6 +65,12 @@ li a:hover {
     font-size: 24px;
   }
 
+  .copy {
+    padding-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+  }
+
 .navbar {
     margin-bottom: 20px;
 }
@@ -76,7 +89,15 @@ li a:hover {
   overflow:hidden;
 }
 
- .flex .info{
+.flex p {
+  min-width: 0;
+  font-size:24px;
+  font-weight:600;
+  flex:60%;
+ }
+
+
+.flex .info{
   margin: 0 5px 0 10px;
   border-radius: 30px;
   min-width: 0;
@@ -84,14 +105,19 @@ li a:hover {
   font-weight:600;  
   flex:40%;
   padding:50px;
+  overflow: hidden;
+  
 }
 
  .flex .image-container {
+  display:none;
   margin: 0 10px 0 5px;
   border-radius: 30px;
   align-items: center;
   flex:60%;
-  background-color:#f7f7f7;
+  background: linear-gradient(-45deg, #9CD7CA, #EFE696, #BDE7F8, #F4AD8D); 
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
 }
 
 .flex .image-container .pkmn-image-bg{
@@ -109,6 +135,46 @@ li a:hover {
   max-height: 100%;
 }
 
+/* ---  Element Sizing  --- */
+
+.welcome {
+  text-align: left;
+  max-width: 100%;
+}
+
+.evo {
+  max-width: 30%;
+  padding-top: 15px;
+}
+
+.type {
+  max-width: 40%;
+  max-height: 40%;
+  padding-top: 15px;
+}
+
+.welc {
+  line-height: 60%;
+  font-family: 'Barlow';
+  font-weight: 500;
+  padding: 0;
+  font-size: 24px;
+}
+
+.kantoreg {  
+  line-height: 80%;
+  font-family: 'Gabarito';
+  font-weight: 900;
+  padding: 0;
+  font-size: 100px;
+  padding-bottom: 15px;
+}
+
+
+
+/* ---  Animations  --- */
+
+
 .rotate {
   animation-name: rotator;
   animation-duration:2s;
@@ -118,15 +184,20 @@ li a:hover {
   animation-timing-function: linear;
 }
 
-.welcome {
-  max-width: 100%;
-  padding: 15px;
+.fadeleft {
+  animation-name: fadeInLeft;
+  animation-duration:1s;
+  transform-origin: center;
+
 }
 
-.evo {
-  max-width: 30%;
-  padding-top: 15px;
+body {
+  animation: fadeInAnimation ease 1.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+
+/* ---  Keyframes  --- */
 
 @keyframes rotator{
   50% {
@@ -137,10 +208,36 @@ li a:hover {
   }
 }
 
- .flex p {
-  min-width: 0;
-  font-size:24px;
-  font-weight:600;
-  flex:60%;
- }
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-10px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}  
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+   

@@ -1,3 +1,3 @@
-window.onload = function(){
+$window.onload = function(){
     $('.pkmn-image-bg').toggleClass('rotate')
 }

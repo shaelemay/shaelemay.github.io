@@ -1,3 +1,3 @@
-$('.image-container').hover(function(){
+window.onload = function(){
     $('.pkmn-image-bg').toggleClass('rotate')
-})
+}

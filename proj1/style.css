@@ -118,6 +118,16 @@ li a:hover {
   animation-timing-function: linear;
 }
 
+.welcome {
+  max-width: 100%;
+  padding: 15px;
+}
+
+.evo {
+  max-width: 30%;
+  padding-top: 15px;
+}
+
 @keyframes rotator{
   50% {
     transform: rotate(-30deg);

@@ -33,23 +33,24 @@ li a:hover {
 
   h1 {
     font-family: "Barlow", sans-serif;
-    font-size: 36px;
+    font-size: 1.5rem;
     color: #303030;   
   }
 
   h2 {
     font-family: "Gabarito", sans-serif;
+    font-size: 3rem;
   }
 
   h3 {
     font-family: "Barlow", sans-serif;
-    font-size: 36px;
+    font-size: 2rem;
   }
   
   p {
     padding-top: 10px;
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .copy {
@@ -72,17 +73,16 @@ li a:hover {
 .flex p {
   display:flex;
   min-width: 0;
-  font-size:24px;
   font-weight:600;
   flex:60%;
  }
 
 
 .flex .info{
+  flex-shrink: 1;
   margin: 0 5px 0 10px;
   border-radius: 30px;
   min-width: 0;
-  font-size:55px;
   font-weight:600;  
   flex:40%;
   padding:50px;
@@ -90,12 +90,14 @@ li a:hover {
   
 }
 
+
  .flex .image-container {
   display:none;
   margin: 0 10px 0 5px;
   border-radius: 30px;
   align-items: center;
   flex:60%;
+  position: relative;
   background: linear-gradient(-45deg, #9CD7CA, #EFE696, #BDE7F8, #F4AD8D); 
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
@@ -103,17 +105,17 @@ li a:hover {
 
 .flex .image-container .pkmn-image-bg{
   padding-top: 20px;
-  left: 50%;
+  left: 5%;
   position:absolute;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .flex .image-container .pkmn-image{
-  left: 50%; 
+  left: 5%; 
   position:absolute;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .flex .info .top {
@@ -240,4 +242,36 @@ body {
       opacity: 1;
    }
 }
+
+/* ---  Media  --- */
    
+@media screen and (max-width:768px){
+  * { padding: 0; margin: 0; box-sizing: border-box;}
+
+
+  .flex {
+    flex-direction: column-reverse;
+    overflow: visible;
+    height:100vh;
+  }
+  .flex .info {
+    height:auto;
+    padding: 20px;
+    flex:45%;
+    font-size: 2em;
+    overflow-wrap: normal;
+  }
+  .image-container{
+    padding-bottom: 5%;
+    flex:50%;
+    max-height: 40vh;
+    overflow: hidden;
+  }
+  .pkmn-image {
+    left: 60%;
+
+  }
+  .pkmn-image-bg {
+    left:50%;
+  }
+}

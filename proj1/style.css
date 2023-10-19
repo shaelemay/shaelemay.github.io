@@ -62,12 +62,14 @@ li a:hover {
 
 .flex {
   display:flex;
+  gap:10px;
   position:relative;
   overflow:hidden;
 }
 
 .flex p {
   display:flex;
+  
   min-width: 0;
   font-weight:600;
   flex:60%;
@@ -76,7 +78,6 @@ li a:hover {
 
 .flex .info{
   flex-shrink: 1;
-  margin: 0 5px 0 10px;
   border-radius: 30px;
   min-width: 0;
   font-weight:600;  
@@ -242,17 +243,24 @@ body {
    
 @media screen and (max-width:768px){
   .flex {
+
     padding:0;
     flex-direction: column-reverse;
     overflow: visible;
     height:150vh;
   }
   .flex .info {
-    height: 150vh;
     margin:0;
     padding:25px;
     flex:70%;
     font-size: 2em;
+  }
+
+  .flex .info .top {
+    padding:0;
+  }
+  .flex .info .bottom {
+    padding: 0;
   }
 
 

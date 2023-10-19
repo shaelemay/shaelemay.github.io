@@ -49,13 +49,14 @@ li a:hover {
   p {
     padding-top: 10px;
     font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .copy {
-    padding-top: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
+    font-family: 'Barlow';
+    font-size: 12px;
+    text-align: right;
+    margin:5px;
   }
 
 /* ---  Flexbox things  --- */
@@ -65,13 +66,12 @@ li a:hover {
   gap:10px;
   position:relative;
   overflow:hidden;
+  margin: 5px;
 }
 
 .flex p {
   display:flex;
-  
   min-width: 0;
-  font-weight:600;
   flex:60%;
  }
 
@@ -102,24 +102,18 @@ li a:hover {
 
 .flex .image-container .pkmn-image-bg{
   position:absolute;
-  
   max-width: 90%;
   max-height: 90%;
 }
 
 .flex .image-container .pkmn-image{
-  
   position:absolute;
   max-width: 90%;
   max-height: 90%;
 }
 
-.flex .info .top {
-  padding: 0 0 50px 0;
-}
-
 .flex .info .bottom {
-  padding: 50px 0 0 0;
+  padding: 25px 0 0 0;
 }
 
 /* ---  Element Sizing  --- */
@@ -243,7 +237,6 @@ body {
    
 @media screen and (max-width:768px){
   .flex {
-
     padding:0;
     flex-direction: column-reverse;
     overflow: visible;
@@ -253,17 +246,13 @@ body {
     margin:0;
     padding:25px;
     flex:70%;
-    font-size: 2em;
   }
-
   .flex .info .top {
     padding:0;
   }
   .flex .info .bottom {
     padding: 0;
   }
-
-
   .image-container{
     flex:30%;
     overflow: hidden;

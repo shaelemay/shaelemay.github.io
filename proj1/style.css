@@ -5,9 +5,8 @@
 
 ul {
     list-style-type: none;
-    margin: 0 10px 0 10px;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #ffffff
   }
   
 li {
@@ -62,9 +61,6 @@ li a:hover {
 /* ---  Flexbox things  --- */
 
 .flex {
-  width: 100vw;
-  height: 10vh;
-  min-height: 90vh;
   display:flex;
   position:relative;
   overflow:hidden;
@@ -92,10 +88,10 @@ li a:hover {
 
 
  .flex .image-container {
-  display:none;
-  margin: 0 10px 0 5px;
-  border-radius: 30px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 30px;  align-items: center;
   flex:60%;
   position: relative;
   background: linear-gradient(-45deg, #9CD7CA, #EFE696, #BDE7F8, #F4AD8D); 
@@ -104,15 +100,14 @@ li a:hover {
 }
 
 .flex .image-container .pkmn-image-bg{
-  padding-top: 20px;
-  left: 5%;
   position:absolute;
+  left:15%;
   max-width: 90%;
   max-height: 90%;
 }
 
 .flex .image-container .pkmn-image{
-  left: 5%; 
+  left:15%;
   position:absolute;
   max-width: 90%;
   max-height: 90%;
@@ -246,32 +241,37 @@ body {
 /* ---  Media  --- */
    
 @media screen and (max-width:768px){
-  * { padding: 0; margin: 0; box-sizing: border-box;}
-
-
   .flex {
+    padding:0;
     flex-direction: column-reverse;
     overflow: visible;
     height:100vh;
   }
   .flex .info {
-    height:auto;
-    padding: 20px;
-    flex:45%;
+    height: 150vh;
+    margin:0;
+    padding:25px;
+    flex:70%;
     font-size: 2em;
-    overflow-wrap: normal;
   }
+
+
   .image-container{
-    padding-bottom: 5%;
-    flex:50%;
-    max-height: 40vh;
+    flex:30%;
     overflow: hidden;
   }
   .pkmn-image {
-    left: 60%;
-
+    border: 1px solid red;
+    left:0;
+    max-width: 0;
+    max-height: 0;
+    margin: auto;
   }
   .pkmn-image-bg {
-    left:50%;
+    border: 1px solid red;
+    left:0;
+    max-width: 0;
+    max-height: 0;
+    margin: auto;
   }
 }

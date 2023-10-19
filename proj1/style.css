@@ -101,13 +101,13 @@ li a:hover {
 
 .flex .image-container .pkmn-image-bg{
   position:absolute;
-  left:15%;
+  
   max-width: 90%;
   max-height: 90%;
 }
 
 .flex .image-container .pkmn-image{
-  left:15%;
+  
   position:absolute;
   max-width: 90%;
   max-height: 90%;
@@ -245,7 +245,7 @@ body {
     padding:0;
     flex-direction: column-reverse;
     overflow: visible;
-    height:100vh;
+    height:150vh;
   }
   .flex .info {
     height: 150vh;
@@ -261,17 +261,9 @@ body {
     overflow: hidden;
   }
   .pkmn-image {
-    border: 1px solid red;
-    left:0;
-    max-width: 0;
-    max-height: 0;
     margin: auto;
   }
   .pkmn-image-bg {
-    border: 1px solid red;
-    left:0;
-    max-width: 0;
-    max-height: 0;
     margin: auto;
   }
 }

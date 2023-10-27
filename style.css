@@ -63,11 +63,11 @@ h1{
 }
 
 .about h1 {
-  font-size: 5rem;
+  font-size: 5em;
 }
 
 .about p {
-  font-size: 2rem;
+  font-size: 2em;
   padding: 10px;
 }
 
@@ -84,11 +84,11 @@ h1{
 }
 
 .project h1 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 .project p {
-  font-size: 2rem;
+  font-size: 2em;
   padding: 10px;
 }
 
@@ -100,7 +100,7 @@ button {
   padding: 20px 25px;
   text-align: center;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 10%;
   width: 20%;
   transition-duration: 0.4s;
 }
@@ -128,7 +128,7 @@ button:hover {
 
 .project1 {
   padding:10px;
-  height: 60vh;
+  height: 100%;
   width: 100%;
   display:flex;
   margin-bottom: 15px;
@@ -136,8 +136,38 @@ button:hover {
 
 .project2 {
   padding:10px;
-  height: 60vh;
+  height: 100%;
   width: 100%;
   display:flex;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width:768px){
+  #navbar {
+    font-size: 1em;
+  }
+  .about h1 {
+    font-size: 2em;
+  }
+  .about p {
+    font-size: 1em;
+  }
+  .project h1 {
+    font-size: 2em;
+  }
+  .project p {
+    font-size: 1em;
+  }
+  .project1 {
+    height: 70vh;
+    flex-direction: column-reverse;
+  }
+  .project img {
+    object-fit: contain;
+  }
+  button {
+    
+    font-size: 1rem;
+    width:40%;
+  }
 }

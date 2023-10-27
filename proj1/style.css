@@ -6,7 +6,10 @@
 ul {
     list-style-type: none;
     overflow: hidden;
+<<<<<<< Updated upstream
     background-color: white;
+=======
+>>>>>>> Stashed changes
   }
   
 li {
@@ -62,6 +65,7 @@ li a:hover {
 /* ---  Flexbox things  --- */
 
 .flex {
+  height: 85vh;
   display:flex;
   gap:10px;
   position:relative;

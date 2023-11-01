@@ -1,11 +1,13 @@
 * { padding: 0; margin: 0; box-sizing: border-box;}
 
+@font-face {
+  font-family: 'SugarAndCream';
+  src: url(./assets/fonts/Sugar&Cream\ Regular.ttf);
+}
+
 /* Start Global Rules */
 * {
     box-sizing: border-box;
-  }
-  body {
-    font-family: 'Open Sans', sans-serif;
   }
   a {
     text-decoration: none;
@@ -45,6 +47,8 @@
   .landing-page header .links {
     display: flex;
     align-items: center;
+    font-family: 'Basic';
+    font-size: 1.25em;
   }
 
   .landing-page header .links li {
@@ -80,17 +84,19 @@
   }
   .landing-page .content .info {
     display:relative;
-    margin-top:20vh;
+    margin-top:10vh;
   }
 
   .landing-page .content .info h1 {
     color: #5d5d5d;
-    font-size: 44px;
+    font-family:'SugarAndCream';
+    font-size: 6em;
   }
   .landing-page .content .info p {
     margin: 0;
     line-height: 1.6;
-    font-size: 15px;
+    font-family: 'Basic', sans-serif;
+    font-size: 1.5em;
     color: #5d5d5d;
   }
   .landing-page .content .info button {
@@ -110,7 +116,6 @@
     max-width: 100%;
   }
 
-  
   .gallery-container{
     padding: 15px 0;
     margin: 0 auto;
@@ -120,8 +125,6 @@
  .gallery-container h1{
     display:flex;
     position: relative;
-    font-family: 'Oswald', sans-serif;
-    font-size: 44px;
     text-transform: uppercase;
     color: #424242;
   }
@@ -147,23 +150,23 @@
   }
   
   .item-1 { 
-    background-image: url('./assets/sliderbg/childrensapparelbg.png');
+    background-image: url('./assets/categories/kitchen.jpg');
   }
   
   .item-2 { 
-    background-image: url('./assets/sliderbg/babyacc.png');
+    background-image: url('./assets/categories/childrensapparel.jpg');
   }
   
   .item-3 { 
-    background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
+    background-image: url('./assets/categories/bibsandblankets.jpg');
   }
   
   .item-4 { 
-    background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
+    background-image: url('./assets/categories/childrensaccessories.jpg');
   }
   
   .item-5 { 
-    background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
+    background-image: url('./assets/categories/giftset.jpg');
   }
 
   /* End Landing Page */

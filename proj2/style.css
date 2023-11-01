@@ -72,6 +72,10 @@
   .landing-page header .links li:not(:last-child):hover {
     color: #d7a17e;
   }
+
+  .landing-page header .links li:not(:last-child):visited {
+    color: #2f932b;
+  }
   .landing-page .content .container {
     display: flex;
     justify-content: space-between;

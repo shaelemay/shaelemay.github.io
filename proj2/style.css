@@ -41,7 +41,9 @@
     color: #9EB8C6;
     transition: 0.2s;
   }
-  
+  #container {
+    opacity:0;
+  }
   .container {
     width: 100vw;
     padding-left: 15px;
@@ -56,80 +58,81 @@
   /* End Global Rules */
   
   /* Start Landing Page */
-  .landing-page header {
-    min-height: 50px;
-    display: flex;
-  }
 
-  .landing-page header .container {
+  .nav .nav-container {
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
 
-  .landing-page header .links {
+  .nav .links {
     display: flex;
     align-items: center;
     font-family: 'Basic';
     font-size: 1.25em;
   }
 
-  .landing-page header .links li {
+  .nav .links li {
     transition: .3s;
   }
 
-  .landing-page header .links li:last-child {
+  .nav .links li:last-child {
     border-radius: 20px;
     padding: 10px 20px;
     color: #FFF;
     background-color: #d7a17e;
   }
 
-  .landing-page header .links li:last-child:hover{
+  .nav .links li:last-child:hover{
     background-color: #9EB8C6;
   }
 
-  .landing-page header .links li:last-child a:visited {
+  .nav .links li:last-child a:visited {
     color: #FFF;
   }
 
-  .landing-page header .links li:not(:last-child) {
+  .nav .links li:not(:last-child) {
     margin-right: 30px;
   }
 
-  .landing-page header .links li:not(:last-child):visited {
+  .nav .links li:not(:last-child):visited {
     color: #424242;
   }
 
-  .landing-page .content .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    max-height: 70vh;
-
-  }
   .alert a:hover, .alert a:focus {
     color: white;
   }
-  .landing-page .content .info {
+  .nav .content .container .info {
     display:relative;
     margin-top:10vh;
   }
 
-  .landing-page .content .info h1 {
+/* Homee Page Contents */
+
+.container {
+  animation: fadeIn 1s; 
+  display:flex;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.container .info h1 {
     color: #5d5d5d;
     font-family:'SugarAndCream';
     font-size: 6em;
   }
-  .landing-page .content .info p {
+.container .info p {
     margin: 0;
     line-height: 1.6;
     font-family: 'Basic', sans-serif;
     font-size: 1.5em;
     color: #5d5d5d;
   }
-  .landing-page .content .info button {
+.info button {
     border: 0;
     border-radius: 20px;
     padding: 12px 30px;
@@ -138,11 +141,16 @@
     color: #FFF;
     background-color: #d7a17e;
   }
-  .landing-page .content .info button a:visited {
+.info button a:visited {
     color: #FFF;
   }
 
-  .landing-page .content .image img {
+.info button:hover{
+  transition:0.2s;
+    background-color: #9EB8C6;
+  }
+
+.image img {
     max-width: 100%;
   }
 
@@ -151,7 +159,8 @@
     font-size: 1rem;
   }
 
-  /* About Page Layout */
+
+  /* About Page Contents */
 .flex-about {
   display: flex;
   padding: 0 10px;
@@ -172,10 +181,8 @@
   background-position: center;
 }
 
-
-
   /* Home Page Image Gallery */
-
+  
   .gallery-container{
     padding: 15px 0;
     margin: 0 auto;

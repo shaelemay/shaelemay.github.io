@@ -9,15 +9,39 @@
 * {
     box-sizing: border-box;
   }
+
+  h1 {
+    font-family: 'SugarAndCream';
+    font-size: 5rem;
+    color:#424242;
+  }
+
+  p {
+    padding: 0 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    color:#424242;
+  }
   a {
     text-decoration: none;
   }
 
   ul {
+    color: #424242;
     list-style: none;
     padding: 0;
     margin: 0;
   }
+
+  ul a:visited{
+    color: #424242;
+  }
+
+  ul a:hover  {
+    color: #9EB8C6;
+    transition: 0.2s;
+  }
+  
   .container {
     width: 100vw;
     padding-left: 15px;
@@ -52,9 +76,6 @@
   }
 
   .landing-page header .links li {
-    margin-left: 30px;
-    color: #d7a17e;
-    cursor: pointer;
     transition: .3s;
   }
 
@@ -65,17 +86,22 @@
     background-color: #d7a17e;
   }
 
+  .landing-page header .links li:last-child:hover{
+    background-color: #9EB8C6;
+  }
+
   .landing-page header .links li:last-child a:visited {
     color: #FFF;
   }
 
-  .landing-page header .links li:not(:last-child):hover {
-    color: #d7a17e;
+  .landing-page header .links li:not(:last-child) {
+    margin-right: 30px;
   }
 
   .landing-page header .links li:not(:last-child):visited {
-    color: #2f932b;
+    color: #424242;
   }
+
   .landing-page .content .container {
     display: flex;
     justify-content: space-between;
@@ -119,6 +145,36 @@
   .landing-page .content .image img {
     max-width: 100%;
   }
+
+  button {
+    font-family: 'Basic';
+    font-size: 1rem;
+  }
+
+  /* About Page Layout */
+.flex-about {
+  display: flex;
+  padding: 0 10px;
+  gap: 10px;
+  height: 100vh;
+}
+
+.flex-about .content-left { 
+  margin-top: 5%;
+  flex:50%;
+}
+
+.flex-about .content-right {
+  flex:50%;
+  background-image: url('./assets/owner.png');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+}
+
+
+
+  /* Home Page Image Gallery */
 
   .gallery-container{
     padding: 15px 0;

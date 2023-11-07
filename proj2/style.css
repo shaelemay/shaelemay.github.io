@@ -10,6 +10,10 @@
     box-sizing: border-box;
   }
 
+  body {
+    min-height: calc(100% - 185px);
+  }
+
   h1 {
     font-family: 'SugarAndCream';
     font-size: 5rem;
@@ -29,7 +33,7 @@
   ul {
     color: #424242;
     list-style: none;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
   }
 
@@ -237,6 +241,170 @@
   }
 
   /* End Landing Page */
+
+  /* Retailers Containers */
+.locate-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+  .locate-container h1 {
+    text-align: center;
+  }
+
+  .locate-container h2 {
+    text-align: center;
+    font-family: 'Basic';
+    font-size: 1.5rem;
+    color: #424242;
+    margin: 25px 0;
+  }
+  .location {
+    display:flex;
+    justify-content: center;
+    gap:25px;
+    text-align: center;
+  }
+
+  .location p {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+  }
+
+  .location button {
+    font-family: 'Inter', sans-serif;
+    border:none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px;
+    color: #d7a17e;
+    background-color: #FFF;
+    box-shadow: #8f5747 0px 2px 15px 0px;
+  }
+
+  .location button:hover {
+    cursor: pointer;
+    background-color: #9EB8C6;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .locationone  {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationtwo {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationthree {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationfour {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationfive {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationsix {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationseven {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+  .locationeight {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #d7a17e;
+    border-radius: 15px;
+    color:white;
+  }
+
+  footer {
+    display:flex;
+    height: 185px;
+    width: 100vw;
+    background-color: #d7a17e;
+    color: #FFF;
+    bottom: 0;
+  }
+  svg {
+    width: 50px;
+    height:auto;
+  }
+
+  .logoimg {
+    flex: 1 0 auto;
+    background-image: url('./assets/footer/footer.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  .social-one {
+    flex: 1 0 auto;
+    background-image: url('./assets/footer/fb.svg');
+    background-repeat: no-repeat;
+  }
+
+  .social-two {
+    flex: 1 0 auto;
+    background-image: url('./assets/footer/ig.svg');
+    background-repeat: no-repeat;
+  }
+
 
     /* Small */
     @media screen and (max-width:768px){

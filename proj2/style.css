@@ -11,7 +11,7 @@
   }
 
   body {
-    min-height: calc(100% - 185px);
+    min-height: calc(100% - 170px);
   }
 
   h1 {
@@ -36,6 +36,10 @@
     padding: 0 10px;
     margin: 0;
   }
+  ul a {
+    color: #424242;
+  }
+
 
   ul a:visited{
     color: #424242;
@@ -183,6 +187,8 @@
   background-repeat: no-repeat;
   background-size:contain;
   background-position: center;
+  padding: 10px;
+  margin: 10px;
 }
 
   /* Home Page Image Gallery */
@@ -372,37 +378,51 @@
   }
 
   footer {
-    display:flex;
-    height: 185px;
+    padding: 15px;
+    height: 170px;
     width: 100vw;
     background-color: #d7a17e;
     color: #FFF;
     bottom: 0;
   }
-  svg {
-    width: 50px;
-    height:auto;
-  }
 
   .logoimg {
-    flex: 1 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     background-image: url('./assets/footer/footer.png');
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
   }
 
+.social {
+  justify-content: center;
+  align-content: center;
+  display:flex;
+  height:50px;
+}
   
   .social-one {
-    flex: 1 0 auto;
+    height: 50px;
+    width:50px;
     background-image: url('./assets/footer/fb.svg');
     background-repeat: no-repeat;
   }
 
   .social-two {
-    flex: 1 0 auto;
+    height: 50px;
+    width:50px;
     background-image: url('./assets/footer/ig.svg');
     background-repeat: no-repeat;
+  }
+
+  footer p {
+    color: #FFF;
+    text-align: right;
+    font-size: 0.75rem;
   }
 
 

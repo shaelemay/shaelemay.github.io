@@ -120,7 +120,7 @@
     color: white;
   }
   .nav .content .container .info {
-    display:relative;
+    position:relative;
     margin-top:10vh;
   }
 
@@ -231,10 +231,9 @@
     background-size: cover;
     background-repeat: none;
     transition: flex 0.8s ease;
-    
-    &:hover{
-      flex: 7;
-    }
+  }
+  .item:hover{
+    flex: 7;
   }
   
   .item-1 { 
@@ -389,26 +388,28 @@
   }
 
   footer {
-    justify-content: center;
     display:flex;
     padding: 5px;
     width: 100vw;
     background-color: #d7a17e;
     color: #FFF;
-    bottom: 0;
+    position: absolute;
+    bottom:0;
   }
 
   footer .left {
     flex:1;
   }
 
-  .socialimg {
-    flex:1;
-    align-items: center;
+  footer .socialimg {
+    display:flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex:1;
     max-width: 30vw;
   }
-  .copy {   
+  footer .copy {   
     flex:1;
     align-self: flex-end;
   }
@@ -430,8 +431,6 @@
     width:64px;
     height:64px;
   }
-
-
 
 .social {
   display:flex;

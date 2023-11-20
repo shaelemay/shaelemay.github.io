@@ -24,10 +24,53 @@
         </div>
       </div>
       <!-- End Landing Page -->
-      <div class="container">
+      <div class="shop-container">
+
+      <!-- Slideshow -->
+        <section class="slideshow">
+          <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <img class="mySlides" src="../assets/categories/bibsandblankets.jpg">
+          <img class="mySlides" src="../assets/categories/childrensapparel.jpg">
+          <img class="mySlides" src="../assets/categories/giftset.jpg">
+          <img class="mySlides" src="../assets/categories/childrensaccessories.jpg">
+          <button class="display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </section>
+      <!-- Category Buttons -->
+        <h1 style="text-align: center;">Categories</h1>
+        <div class="cats">
+          <section class="block">
+            <img src="../assets/categories/giftset.jpg" alt="">
+            <a href="#"><p>Clothes</p></a>
+          </section>
+      </div>
+
+      <!-- Recommended -->
+        <h1 style="text-align: center;">Recommended</h1>
+        <section class="recc">
+            <div class="rec-img">
+              <div class="rec-img-1"></div>
+           </div>
+            <div class="rec-text">
+              <h2>Children's Clothes</h2>
+              <p>Hello World</p><br>
+              <a class="shop-btn" href="#">Shop Now</a>
+
+            </div>
+        </section>
+        <section class="recc">
+            <div class="rec-text" style="text-align: right;">
+              <h2>Bibs and Blankets</h2>
+              <p>Hello World</p><br>
+              <a class="shop-btn" href="#">Shop Now</a>
+            </div>
+            <div class="rec-img">
+               <div class="rec-img-2"></div>
+            </div>
+        </section>
+
 
       </div>
-    </body>
+
     <footer>
       <div class="left">&nbsp;</div>
       <div class="socialimg">
@@ -42,4 +85,5 @@
     </footer>
     <script  src="https://code.jquery.com/jquery-3.7.1.min.js"  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="  crossorigin="anonymous"></script>
     <script src="../script.js"></script>
+  </body>
 </html>

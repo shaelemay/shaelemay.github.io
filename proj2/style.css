@@ -10,9 +10,20 @@
     box-sizing: border-box;
   }
 
+  html, body{
+    min-height:100%;
+  }
+
   body {
+<<<<<<< Updated upstream
     min-height: calc(100% - 170px);
     overflow-x: hidden;
+=======
+    position:relative;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+>>>>>>> Stashed changes
   }
 
   h1 {
@@ -58,11 +69,12 @@
     opacity:0;
   }
   .container {
+    animation: fadeIn 1s; 
+    display:flex;
+    position: relative;
     width: 100vw;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .logo img {
     max-width: 144px;
@@ -118,7 +130,7 @@
     color: white;
   }
   .nav .content .container .info {
-    display:relative;
+    position:relative;
     margin-top:10vh;
   }
 
@@ -175,6 +187,7 @@
 
   /* About Page Contents */
 .flex-about {
+  min-height: 100%;
   display: flex;
   padding: 0 10px;
   gap: 10px;
@@ -225,10 +238,11 @@
     background-size: cover;
     background-repeat: none;
     transition: flex 0.8s ease;
-    
-    &:hover{
-      flex: 7;
-    }
+
+  }
+      
+  .item:hover{
+    flex: 7;
   }
   
   .item-1 { 
@@ -256,7 +270,8 @@
   /* Retailers Containers */
 .locate-container {
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  margin-bottom: 15px;
 }
 
   .locate-container h1 {
@@ -443,6 +458,7 @@
     transition: 0.4s;
   }
 
+<<<<<<< Updated upstream
   /* Shop Squares */
 
   .cats {
@@ -546,23 +562,78 @@
     transition: 0.4s;
   }
 
+=======
+  /* Shop Categories*/
+  .categories {
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  .categories .cat {
+    width: 200px;
+    height: 75px;
+    color: white;
+    background-color: #d7a17e;
+    border: none;
+    border-radius:  5px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1.25rem;
+  }
+
+  .categories .cat:hover {
+    background-color: #9EB8C6;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  /* Shop Recommendations*/
+
+  .recs {
+    margin-top: 50px;
+  }
+
+  .recs h1 {
+    text-align: center;
+  }
+>>>>>>> Stashed changes
 
 /* Footer */
 
   footer {
-    padding: 15px;
-    height: 170px;
+    margin-top: auto;
+    justify-content: center;
+    display:flex;
+    padding: 5px;
     width: 100vw;
     background-color: #d7a17e;
     color: #FFF;
     bottom: 0;
   }
 
+  footer .left {
+    flex:1;
+  }
+
+  footer .socialimg {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    max-width: 30vw;
+  }
+
   .logoimg {
+    margin:5px;
     display: block;
+<<<<<<< Updated upstream
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
+=======
+>>>>>>> Stashed changes
     width: 50%;
     background-image: url('./assets/footer/footer.png');
     background-repeat: no-repeat;
@@ -571,12 +642,18 @@
     background-size: contain;
   }
 
-.social {
-  justify-content: center;
-  align-content: center;
-  display:flex;
-  height:50px;
-}
+  footer .copy {   
+    flex:1;
+    align-self: flex-end;
+  }
+
+  .social {
+    flex:1;
+    justify-content: center;
+    align-content: center;
+    display:flex;
+    height:50px;
+  }
   
   .social-one {
     height: 50px;
@@ -601,11 +678,56 @@
   
     /* Small */
     @media screen and (max-width:768px){
-        .container {
+
+      .container .info h1 {
+        font-size: 4rem;
+      }
+      .container {
+        flex-direction: column-reverse;
+      }
+      .logo img {
+        max-width: 64px;
+      }
+      .nav .links {
+        font-size: 1rem;
+      }
+      .nav .links li:not(:last-child) {
+        margin-right: 15px;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .flex-about {
+        margin-top: 150px;
+        flex-direction: column-reverse;
+        margin-bottom: 30px;
+      }
+      .flex-about .content-right {
+        min-height: 150px;
+        min-width: max-content;
+        background-size: cover;
+      }
+      
+        .locate-container {
           width: 100vw;
+          margin-bottom: 30px;
           flex-direction: column;
+          height: max-content;
         }
         .gallery-container {
           width: 90vw;
+        }
+        .location {
+          flex-wrap: wrap;
+          overflow-y:hidden;
+          
+        }
+
+        .info {
+          margin-bottom: 10px;
+        }
+
+        .gallery-wrap {
+          height: 20vh;
         }
       }

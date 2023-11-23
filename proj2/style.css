@@ -15,15 +15,12 @@
   }
 
   body {
-<<<<<<< Updated upstream
     min-height: calc(100% - 170px);
     overflow-x: hidden;
-=======
     position:relative;
     min-height:100vh;
     display: flex;
     flex-direction: column;
->>>>>>> Stashed changes
   }
 
   h1 {
@@ -453,7 +450,6 @@
     transition: 0.4s;
   }
 
-<<<<<<< Updated upstream
   /* Shop Squares */
 
   .cats {
@@ -557,43 +553,6 @@
     transition: 0.4s;
   }
 
-=======
-  /* Shop Categories*/
-  .categories {
-    justify-content: center;
-    display:flex;
-    align-items: center;
-    align-content: center;
-  }
-
-  .categories .cat {
-    width: 200px;
-    height: 75px;
-    color: white;
-    background-color: #d7a17e;
-    border: none;
-    border-radius:  5px;
-    padding: 10px 15px;
-    margin: 5px;
-    font-size: 1.25rem;
-  }
-
-  .categories .cat:hover {
-    background-color: #9EB8C6;
-    transition: 0.2s;
-    cursor: pointer;
-  }
-
-  /* Shop Recommendations*/
-
-  .recs {
-    margin-top: 50px;
-  }
-
-  .recs h1 {
-    text-align: center;
-  }
->>>>>>> Stashed changes
 
 /* Footer */
 
@@ -623,12 +582,9 @@
   .logoimg {
     margin:5px;
     display: block;
-<<<<<<< Updated upstream
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
-=======
->>>>>>> Stashed changes
     width: 50%;
     background-image: url('./assets/footer/footer.png');
     background-repeat: no-repeat;

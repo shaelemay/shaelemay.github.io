@@ -559,22 +559,21 @@
     width: 100vw;
     gap:10px;
     margin: 10px;
-
+    object-fit: cover;
   }
 
   .item-left {
     height: 100vh;
     position: relative;
     flex:60%;
-    object-fit: contain;
     overflow: hidden;
     align-items: center;
     justify-content: center;
   }
 
   .item-left img {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
 
   .item-right {
@@ -730,4 +729,17 @@ a.cart:hover {
         .gallery-wrap {
           height: 20vh;
         }
+
+        .flex-item {
+          flex-direction: column;
+          width: 90vw;
+          object-fit: cover;
+          margin-bottom:25px;
+        }
+        
+        .item-left img {
+          height: auto;
+          width: 100%;
+        }
+        
       }

@@ -149,15 +149,20 @@
     font-size: 1.5em;
     color: #5d5d5d;
   }
-.info button {
+
+  .info {
+    color: #FFF;
+  }
+
+  .info button {
     border: 0;
     border-radius: 20px;
     padding: 12px 30px;
     margin-top: 30px;
     cursor: pointer;
-    color: #FFF;
     background-color: #d7a17e;
   }
+
 .info button a:visited {
     color: #FFF;
   }
@@ -263,7 +268,6 @@
 .locate-container {
   width: 100vw;
   height: auto;
-  margin-bottom: 15px;
 }
 
   .locate-container h1 {
@@ -271,6 +275,7 @@
   }
 
   .locate-container h2 {
+    margin-top: 50px;
     text-align: center;
     font-family: 'Basic';
     font-size: 1.5rem;
@@ -278,6 +283,7 @@
     margin: 25px 0;
   }
   .location {
+    margin-bottom: 75px;
     display:flex;
     justify-content: center;
     gap:25px;
@@ -657,8 +663,8 @@ a.cart:hover {
     width: 50%;
     background-image: url('./assets/footer/footer.png');
     background-repeat: no-repeat;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-size: contain;
   }
 
@@ -669,24 +675,32 @@ a.cart:hover {
 
   .social {
     flex:1;
-    justify-content: center;
+    align-items: center;
     align-content: center;
     display:flex;
-    height:50px;
+    width: auto;
+    gap:10px;
+    margin-left: -3px;
   }
+
+  .social img {
+    background-size: cover;
+  } 
   
   .social-one {
-    height: 50px;
-    width:50px;
+    height: 25px;
+    width:25px;
     background-image: url('./assets/footer/fb.svg');
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .social-two {
-    height: 50px;
-    width:50px;
+    height: 25px;
+    width:25px;
     background-image: url('./assets/footer/ig.svg');
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   footer p {

@@ -588,6 +588,7 @@ a.cart:hover {
 }
 
 .item-left {
+  width: 50vw;
   position: relative;
   overflow: hidden;  
   background-size: contain;

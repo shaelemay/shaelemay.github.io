@@ -753,14 +753,31 @@ a.cart:hover {
 
         .flex-item {
           flex-direction: column;
-          width: 90vw;
           object-fit: cover;
           margin-bottom:25px;
+          align-items: center;
         }
         
         .item-left img {
           height: auto;
           width: 100%;
+        }
+
+        .item-left {
+          min-width: fit-content;
+          min-height: max-content;
+        }
+
+        .thumbnail-container {
+          flex-direction: row;
+        }
+
+        .two-column-section {
+          flex-direction: column;
+        }
+
+        .item-right {
+          min-width: 80vw;
         }
         
       }

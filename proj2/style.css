@@ -582,7 +582,6 @@ a.cart:hover {
 }
 
 .two-column-section {
-  flex-direction: column;
   width: fit-content;
   gap:10px;
 }
@@ -607,6 +606,17 @@ a.cart:hover {
 }
 .two-column-section div, .thumbnail-container div {
   flex:1;
+}
+
+.thumbnail-container img {
+  width: 150px;
+  height:auto;
+  background-size:auto;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .item-right {

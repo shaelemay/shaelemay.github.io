@@ -22,3 +22,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
+function changeImage(imagePath) {
+  $("#main-image").attr("src", imagePath);
+}

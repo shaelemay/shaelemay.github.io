@@ -130,6 +130,23 @@ button:hover {
   cursor: pointer;
 }
 
+.assignments{
+  height:max-content;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:20vh;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  margin-bottom: 20vh;
+}
+
+.assignments .column {
+  overflow: hidden;
+  float:left;
+}
+
+
 .project1 {
   padding:10px;
   height: 100%;

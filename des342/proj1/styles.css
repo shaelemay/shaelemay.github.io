@@ -1,0 +1,21 @@
+* { padding: 0; margin: 0; box-sizing: border-box;}
+
+.background {
+    width:100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    background-image: url("./assets/sunny-bg-full.png")
+}
+
+.bird {
+    position: absolute;
+    top: -160px;
+    right: 20px;
+    transform: scale(0.4);
+}
+
+.text {
+    position:absolute;
+    top: 40vh;
+    left: 10vw;
+}

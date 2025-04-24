@@ -7,6 +7,10 @@ body {
     background-attachment: fixed;
 }
 
+.line {
+    font: 36px "Fira Sans", sans-serif;
+}
+
 .bird { 
     position: relative;
 }
@@ -18,3 +22,8 @@ body {
 /* .text {
 
 } */
+
+.text {
+    position: fixed;
+    z-index: 2;
+}

@@ -8,7 +8,7 @@ body {
 }
 
 .line {
-    font: 36px "Fira Sans", sans-serif;
+    font: 36px "Raleway", sans-serif;
 }
 
 .bird { 
@@ -22,6 +22,14 @@ body {
 /* .text {
 
 } */
+
+.note {
+    position:fixed;
+    z-index: 3;
+    top: 0%;
+    left: 10%;
+    scale: 0.8;
+}
 
 .text {
     position: fixed;

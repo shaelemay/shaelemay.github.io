@@ -2,10 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline();
 // layers(#): background -> bird -> text (line 1, 2, 3, 4)
 
-gsap.set('.bird', {left:'40%', scale:0.6})
+gsap.set('.bird', {left:'40%', scale:0.6});
 gsap.set('.branch', {left:'40%', scale:0.8})
-gsap.set('.text', {sutoAlpha: 1, left: '10%', top: '50%'})
-
+gsap.set('.text', {autoAlpha:1})
 
 ScrollTrigger.defaults({
   markers: true,
@@ -16,6 +15,7 @@ ScrollTrigger.defaults({
 tl
   .from('.bird', {scale:0.4, ease:'none'})
   .from('.branch', {left:'80%',ease:'none'})
+  .from('.note', {left:'30%',opacity:0})
 
 ScrollTrigger.create({
     id: "bird",
@@ -32,9 +32,16 @@ ScrollTrigger.create({
 })
 
 ScrollTrigger.create({
+  id:"note",
+  trigger: ".note",
+  start: "top 10%",
+  end: "bottom 50%",
+})
+
+ScrollTrigger.create({
   id: "bird-sticky",
   trigger: ".bird",
-  start: "center 40%",
+  start: "center center",
   end: "max",
   pin: true,
   pinSpacing: false,
@@ -46,5 +53,17 @@ ScrollTrigger.create({
   trigger: ".branch",
   start: "top 1000px",
   end:"max",
-  scrub:true,
 })
+
+ScrollTrigger.create({
+  id: "branch-sticky",
+  trigger: ".branch",
+  start: "top 200",
+  end: "max",
+  pin: true,
+  pinSpacing: false,
+})
+
+function stick () {
+  gsap.to('.branch' {position:'sticky'})
+}

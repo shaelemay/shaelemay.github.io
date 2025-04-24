@@ -7,7 +7,7 @@ gsap.to(".square", {
         trigger: ".square",
         start: "top 60%", 
         end: "top 40%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none none", 
         markers:true,
         toggleClass: "red"
     }

@@ -9,13 +9,14 @@ gsap.set('.text', {autoAlpha:1})
 ScrollTrigger.defaults({
   markers: true,
   scrub: true,
-  snap: 0.1,
 })
 
+// when 'note' reaches end of animation, 'branch' snaps back to 
 tl
   .from('.bird', {scale:0.4, ease:'none'})
-  .from('.branch', {left:'80%',ease:'none'})
+  .from('.branch', {left:'90%',ease:'none'})
   .from('.note', {left:'30%',opacity:0})
+
 
 ScrollTrigger.create({
     id: "bird",
@@ -58,12 +59,9 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   id: "branch-sticky",
   trigger: ".branch",
-  start: "top 200",
-  end: "max",
-  pin: true,
-  pinSpacing: false,
+  start: "top 40%",
+  end: "top max",
+  pin:true,
+  pinSpacing:0,
+  scrub:true,
 })
-
-function stick () {
-  gsap.to('.branch' {position:'sticky'})
-}

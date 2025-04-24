@@ -2,7 +2,6 @@
 
 body {
     overflow-x: hidden;
-    background-color: aquamarine;
     background-image: url("./assets/sunny-bg-full.png");
     background-attachment: fixed;
 }
@@ -17,18 +16,19 @@ body {
 
 .branch {
     position: relative;
+    opacity:1;
     z-index: -1;
 }
 /* .text {
 
 } */
 
-.note {
+.notes {
     position:fixed;
     z-index: 3;
     top: 0%;
     left: 10%;
-    scale: 0.8;
+    scale: 0.7;
 }
 
 .text {

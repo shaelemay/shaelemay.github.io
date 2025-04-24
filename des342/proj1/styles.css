@@ -1,22 +1,25 @@
 * { padding: 0; margin: 0; box-sizing: border-box;}
 
-body {
+.background {
+    position:fixed;
     overflow-x: hidden;
-    background-image: url("./assets/sunny-bg-full.png");
-    background-attachment: fixed;
 }
 
+.body{
+    overflow-x:hidden;
+}
 .line {
     font: 36px "Raleway", sans-serif;
 }
 
 .bird { 
     position: relative;
+    z-index: 3;
 }
 
 .branch {
     position: fixed;
-    z-index: -1;
+    z-index: 1;
 }
 /* .text {
 
@@ -31,6 +34,6 @@ body {
 }
 
 .text {
-    position: fixed;
+    position: relative;
     z-index: 2;
 }

@@ -4,12 +4,23 @@ let tl = gsap.timeline();
 
 gsap.set('.bird', {left:'40%', bottom:'15%', scale:0.6});
 gsap.set('.branch', {left:'250%', scale:0.7,top:'30%'})
-gsap.set('.text', {autoAlpha:1})
+gsap.set('.text', {autoAlpha:1, left:0, top:'100%'})
 gsap.set('.note', {opacity:1, left:0,top:-900})
 
 ScrollTrigger.defaults({
   markers: true,
   scrub: true,
+})
+
+gsap.to('.text', {
+  top:0,
+  left:0,
+  scrollTrigger:{
+    id: 'text',
+    trigger: '.text',
+    start: "top top",
+    end: "+= 10px"
+  }
 })
 
 

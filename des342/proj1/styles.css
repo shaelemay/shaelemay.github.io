@@ -11,8 +11,6 @@
 .line {
     font: 36px "Raleway", sans-serif;
     position: sticky;
-    left:20%;
-    top:50%;
 }
 
 .bird { 
@@ -39,4 +37,7 @@
 .text {
     position: fixed;
     z-index: 4;
+    
+    left:15%;
+    top:30%;
 }

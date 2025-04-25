@@ -4,7 +4,7 @@ let tl = gsap.timeline();
 
 gsap.set('.bird', {left:'40%', bottom:'15%', scale:0.6});
 gsap.set('.branch', {left:'250%', scale:0.7,top:'30%'})
-gsap.set('.text', {autoAlpha:1, left:'10%', top:'40%'})
+gsap.set('.text', {autoAlpha:1})
 gsap.set('.note', {opacity:1, left:0,top:-900})
 gsap.set('body', {'margin-bottom':300})
 

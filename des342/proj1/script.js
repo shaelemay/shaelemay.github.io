@@ -4,23 +4,18 @@ let tl = gsap.timeline();
 
 gsap.set('.bird', {left:'40%', bottom:'15%', scale:0.6});
 gsap.set('.branch', {left:'250%', scale:0.7,top:'30%'})
-gsap.set('.text', {autoAlpha:1, left:0, top:'100%'})
+gsap.set('.text', {autoAlpha:1, left:'10%', top:'40%'})
 gsap.set('.note', {opacity:1, left:0,top:-900})
+gsap.set('body', {'margin-bottom':300})
 
 ScrollTrigger.defaults({
   markers: true,
   scrub: true,
-})
-
-gsap.to('.text', {
-  top:0,
-  left:0,
-  scrollTrigger:{
-    id: 'text',
-    trigger: '.text',
-    start: "top top",
-    end: "+= 10px"
-  }
+  snap: {
+    snapTo: 1 /10,
+    duration: 0.1,
+    delay: 0.1,
+  },
 })
 
 
@@ -28,17 +23,19 @@ gsap.from('.bird', {
   scale: 0.4,
   y:-5,
   scrollTrigger: {
+    id: 'bird', 
     trigger: '.bird',
     start:"top center",
     end: "center 100px",
     pin:true,
-    onLeave: () => gsap.set('.bird', {position:'fixed', left:'40%', top:'-86%'}),
+    onLeave: () => gsap.set('.bird', {position:'sticky', top:0}),
     animation: tl,
   }
 })
 
 gsap.to('.branch', {
   x:"-260%",
+
   scrollTrigger: {
     id: 'branch',
     trigger: '.bird',
@@ -60,21 +57,15 @@ gsap.from('.note', {
   }
 })
 
-// tl
-//   .from('.bird', {scale:0.4, ease:'none', top:'10%'})
-//   .from('.branch', {left:'90%',ease:'none'})
-//   .from('.note', {left:'30%',opacity:0})
-
-
-// ScrollTrigger.create({
-//   id:"note",
-//   trigger: ".note",
-//   start: "top 10%",
-//   end: "bottom 50%",
-// })
-
-// ScrollTrigger.create({
-//   trigger: ".bird",
-//   start: "top top",
-//   end: "max",
-// })
+gsap.to('.note', {
+  scale:1.1,
+  left:'20%',
+  scrollTrigger:{
+    id: 'note-leave',
+    trigger: '.bird',
+    start: "top top",
+    end: '+=200',
+    onEnter: () => gsap.to('.branch', {x:'300%',duration:1,ease:'none'})
+  }
+}
+)

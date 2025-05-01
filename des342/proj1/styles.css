@@ -37,3 +37,23 @@ body{
     left:10%;
     bottom:20%;
 }
+
+#lower {
+    position: fixed;
+    z-index: 3;
+}
+#storm {
+    z-index: 2;
+    opacity:0;
+    position: fixed;
+}
+
+#sunny {
+    z-index: 1;
+    position: fixed;
+}
+
+
+.box-note {
+    position: relative;
+}

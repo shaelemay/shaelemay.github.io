@@ -1,6 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 // layers(#): background -> bird -> text (line 1, 2, 3, 4)
 
+
+/* FIRST PAGE */
+
+
+
 gsap.set('.bird', {left:'40%', bottom:'20%', scale:0.6});
 gsap.set('.branch', {left:'250%', scale:0.7,top:'35%'})
 gsap.set('.text', {autoAlpha:1})
@@ -41,6 +46,19 @@ ScrollTrigger.create({
   scrub: true,
   animation: tl
 })
+
+
+
+/* SECOND PAGE */
+
+const pathName = window.location.pathname;
+
+if (pathName === "/versetwo.html") {
+  console.log("This is the about page.");
+}
+
+
+/* THIRD PAGE */
 
 // gsap.from('.note', {
 //   x: 150,

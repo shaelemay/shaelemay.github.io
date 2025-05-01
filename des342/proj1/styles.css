@@ -22,12 +22,10 @@ body{
     position: fixed;
     z-index: 1;
 }
-/* .text {
-
-} */
 
 .note {
-    position:relative;
+    position:sticky;
+    x: 1000;
     z-index: 3;
     scale: 0.7;
 }

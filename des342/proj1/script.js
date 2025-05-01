@@ -9,14 +9,15 @@ gsap.set('body', {'margin-bottom':300})
 
 ScrollTrigger.defaults({
   markers: true,
-  scrub: true,
 })
 
 // tl.from('.note', {x: 150, opacity:0})
 let tl = gsap.timeline();
 
 tl.to('.branch', {x:"-280%", ease: 'none'}, 1)
-tl.to('.note', {opacity:1, y:0, x:0}, 1)
+tl.to('.note', {opacity:1, left: '3%', top:'0%', delay: 1}, 0)
+tl.to('.branch', {opacity:0, delay:4}, 1)
+tl.to('.bird', {opacity:0, delay:4}, 1)
 
 gsap.from('.bird', {
   scale: 0.4,
@@ -26,6 +27,8 @@ gsap.from('.bird', {
     trigger: '.bird',
     start:"top center",
     end:"${window.innerHeight",
+    
+    scrub: true,
     // onLeave: () => gsap.set('.bird', {position:'sticky', top:0}),
   }
 })
@@ -33,9 +36,11 @@ gsap.from('.bird', {
 ScrollTrigger.create({
   trigger: '.bird',
   start: 'top center',
-  end: 'max',
+  end: '+=4000',
   pin: true,
   pinSpacing: false,
+  
+  scrub: true,
   animation: tl
 })
 

@@ -29,8 +29,6 @@ body{
 .note {
     position:relative;
     z-index: 3;
-    top: 90%;
-    left: 10%;
     scale: 0.7;
 }
 

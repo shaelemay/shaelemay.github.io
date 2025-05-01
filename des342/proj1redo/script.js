@@ -9,6 +9,12 @@ gsap.set('.box2', {'background-color':'#C8E9A0'})
 gsap.set('.box3', {'background-color':'#CCCCFF'})
 gsap.set('.box4', {'background-color':'#42213D'})
 
+ScrollTrigger.defaults({
+  markers: true,
+  scrub: true,
+})
+
+
 let panels = gsap.utils.toArray(".container"),
   snaps = [], // will store just the starting scroll value of each of the panels
   panelTriggers = panels.map((panel, i) => {
@@ -43,3 +49,22 @@ ScrollTrigger.defaults({
     },
   })
   
+
+  /* Bird Follow */
+
+
+
+  gsap.to('.bird', {
+    scrollTrigger: {
+      id: 'bird',
+      trigger: '.box1',
+      start: 'center top',
+      end: '+= 4000px',
+      // pin:true,
+      // pinSpacing: false,
+    }
+  })
+
+  scrollTrigger.create('.bird2', {
+    
+  })

@@ -19,7 +19,16 @@
     <img id="lower" src="./assets/lower.png" alt="">
 </div>
 <div class="stormybg">
-
+    <div class="storm-set"></div>
+    <div class="box-note">
+        <div class="note">
+            <img src="./assets/notes.png" alt=""></img>
+        </div>
+    </div>
+    <div class="bird-box"></div>
+<div class="bird">
+    <img src="./assets/bird-full.png"></img>
+</div>
 </div>
 <div class="text">
     <div class="line line1">
@@ -44,39 +53,60 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set('.bird', { left: '40%', bottom: '20%', scale: 0.6 });
-        gsap.set('.branch', { left: '250%', scale: 0.7, top: '35%' })
+        var storm = document.getElementById('storm');
+        var sunny = document.getElementById('sunny');
+        var lower = document.getElementById('lower');
+        var bird = document.getElementById('bird');
+
+
+        gsap.set('.bird', { opacity:0,left: '40%', bottom: '20%', scale: 0.6, position:'absolute', y:3000, 'z-index':5 });
         gsap.set('.text', { autoAlpha: 1 })
-        gsap.set('.note', { opacity: 0 })
+        gsap.set('.note', { right: '10%', top:'5%',scale: 1.1,opacity: 1 })
         gsap.set('body', { 'margin-bottom': 300 })
+        gsap.set('.storm-set', {position:'absolute', y:1300})
+        gsap.set('.bird-box', {position:'absolute', y:2000, height: 200})
+
+        gsap.set(storm, {opacity:0})
 
         ScrollTrigger.defaults({
             markers: true,
         })
 
-        let tl = gsap.timeline();
 
-        gsap.from('.bird', {
-            scale: 0.4,
-            y: -5,
-            scrollTrigger: {
-                id: 'bird',
-                trigger: '.bird',
-                start: "top center",
-                end: "${window.innerHeight",
-                scrub: true,
-            }
+
+        let t1 = gsap.timeline();
+        let t2 = gsap.timeline();
+        let t3 = gsap.timeline();
+        t1.to(storm, {opacity:1})
+        t1.to('.note', {opacity:0})
+        t2.to('.bird', {opacity:1})
+        t3.to('.bird', {scale:1.2, y:3400, x:300})
+
+        ScrollTrigger.create({
+            id: 'storm-appear',
+            trigger: '.storm-set',
+            start: 'top bottom',
+            end: '+=800',
+            scrub: true,
+            animation: t1
         })
+
+        ScrollTrigger.create({
+            id: 'bird',
+            trigger: '.bird-box',
+            start: 'top top',
+            end: '+=2000',
+            animation: t2
+        })
+
         ScrollTrigger.create({
             trigger: '.bird',
-            start: 'top center',
-            end: '+=2000',
+            start: 'center center',
+            end: '+=1000',
             pin: true,
-            pinSpacing: false,
-            scrub: true,
-            animation: tl
+            scrub:true,
+            animation: t3,
         })
-
     </script>
     </script>
 </body>

@@ -18,6 +18,8 @@ ScrollTrigger.defaults({
   },
 })
 
+tl.from('.note', {x: 150, opacity:0})
+
 
 gsap.from('.bird', {
   scale: 0.4,
@@ -26,10 +28,9 @@ gsap.from('.bird', {
     id: 'bird', 
     trigger: '.bird',
     start:"top center",
-    end: "center 100px",
+    endTrigger: ".note",
     pin:true,
     onLeave: () => gsap.set('.bird', {position:'sticky', top:0}),
-    animation: tl,
   }
 })
 
@@ -41,6 +42,7 @@ gsap.to('.branch', {
     trigger: '.bird',
     start: "top 50%",
     end: "+=300px",
+    animation: tl,
   }})
 
 
@@ -52,7 +54,7 @@ gsap.from('.note', {
     id: 'note',
     trigger: '.branch',
     start: "bottom 150px",
-    end:"+=100",
+    end:"+=100  0",
      onLeave: () => gsap.set('.note', {position:'fixed', left:0, top:'5%'}),
   }
 })

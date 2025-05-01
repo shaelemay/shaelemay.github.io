@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 // layers(#): background -> bird -> text (line 1, 2, 3, 4)
 
-gsap.set('.bird', {left:'40%', bottom:'15%', scale:0.6});
+gsap.set('.bird', {left:'40%', bottom:'20%', scale:0.6});
 gsap.set('.branch', {left:'250%', scale:0.7,top:'35%'})
 gsap.set('.text', {autoAlpha:1})
 gsap.set('.note', {opacity:0})
@@ -11,11 +11,10 @@ ScrollTrigger.defaults({
   markers: true,
 })
 
-// tl.from('.note', {x: 150, opacity:0})
 let tl = gsap.timeline();
 
 tl.to('.branch', {x:"-280%", ease: 'none'}, 1)
-tl.to('.note', {opacity:1, left: '3%', top:'0%', delay: 1}, 0)
+tl.to('.note', {opacity:1, left: '3%', top:'0%', scale:0.8, delay: 3, top:50}, 0)
 tl.to('.branch', {opacity:0, delay:4}, 1)
 tl.to('.bird', {opacity:0, delay:4}, 1)
 
@@ -36,10 +35,9 @@ gsap.from('.bird', {
 ScrollTrigger.create({
   trigger: '.bird',
   start: 'top center',
-  end: '+=4000',
+  end: '+=2000',
   pin: true,
   pinSpacing: false,
-  
   scrub: true,
   animation: tl
 })

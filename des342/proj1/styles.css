@@ -24,7 +24,7 @@ body{
 }
 
 .note {
-    position:sticky;
+    position:fixed;
     x: 1000;
     z-index: 3;
     scale: 0.7;

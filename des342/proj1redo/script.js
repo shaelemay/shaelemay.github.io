@@ -9,6 +9,12 @@ gsap.set('.box2', {'background-color':'#C8E9A0'})
 gsap.set('.box3', {'background-color':'#CCCCFF'})
 gsap.set('.box4', {'background-color':'#42213D'})
 
+let div2Center = document.querySelect("div2").getBoundingClientRect().bottom;
+
+
+
+gsap.set('.bird2', {bottom: 'div2Center'})
+
 ScrollTrigger.defaults({
   markers: true,
   scrub: true,
@@ -66,5 +72,11 @@ ScrollTrigger.defaults({
   })
 
   scrollTrigger.create('.bird2', {
-    
+    scale: 0.8,
+    scrollTrigger: {
+      id: 'bird 2',
+      trigger: '.box2',
+      start: 'center top',
+      end: '+=500px',
+    }
   })

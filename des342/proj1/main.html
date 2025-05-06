@@ -57,7 +57,7 @@
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.set('.bird', { left: '40%', bottom: '20%', scale: 0.6 });
-        gsap.set('.branch', { left: '250%', scale: 0.7, top: '35%' })
+        gsap.set('.branch', { right: '-65vw', scale: 0.7, top: '35%' })
         gsap.set('.text', { autoAlpha: 1 })
         gsap.set('.note', { opacity: 0 })
         gsap.set('body', { 'margin-bottom': 300 })
@@ -68,7 +68,7 @@
 
         let tl = gsap.timeline();
 
-        tl.to('.branch', { x: "-280%", ease: 'none' }, 1)
+        tl.to('.branch', { right: "-12vw"}, 1)
         tl.to('.note', { opacity: 1, left: '3%', top: '0%', scale: 0.8, delay: 3, top: 50 }, 0)
         tl.to('.branch', { opacity: 0, delay: 4 }, 1)
         tl.to('.bird', { opacity: 0, delay: 4 }, 1)

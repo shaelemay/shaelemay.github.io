@@ -45,11 +45,8 @@
         <div class="line line4">
             And never stops - at all -
         </div>
-        <div class="btn-right">
-            <a href="/des342/proj1/versethree.html" id="bttn">Back</a>
-        </div>
         <div class="btn-left">
-            <a href="/des342/proj1/versethree.html" id="bttn">Next</a>
+            <a href="/des342/proj1/versetwo.html" id="bttn">Back</a>
         </div>
     </div>
 
@@ -59,65 +56,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
 
-        var storm = document.getElementById('storm');
-        var sunny = document.getElementById('sunny');
-        var lower = document.getElementById('lower');
-        var bird = document.getElementById('bird');
-
-
-        gsap.set('.bird', { opacity: 0, left: '40%', bottom: '20%', scale: 0.6, position: 'absolute', y: 3000, 'z-index': 5 });
-        gsap.set('.text', { autoAlpha: 1 })
-        gsap.set('.note', { right: '10%', top: '5%', scale: 1.1, opacity: 1 })
-        gsap.set('body', { 'margin-bottom': 300 })
-        gsap.set('.storm-set', { position: 'absolute', y: 1300 })
-        gsap.set('.bird-box', { position: 'absolute', y: 2000, height: 200 })
-
-        gsap.set(storm, { opacity: 0 })
-
-        ScrollTrigger.defaults({
-            markers: true,
-        })
-
-
-
-        let t1 = gsap.timeline();
-        let t2 = gsap.timeline();
-        let t3 = gsap.timeline();
-        t1.to(storm, { opacity: 1 })
-        t1.to('.note', { opacity: 0 })
-        t2.to('.bird', { opacity: 1 })
-        t3.to('.bird', { scale: 1.2, y: 3400, x: 300 })
-
-        ScrollTrigger.create({
-            id: 'storm-appear',
-            trigger: '.storm-set',
-            start: 'top bottom',
-            end: '+=800',
-            scrub: true,
-            animation: t1
-        })
-
-        ScrollTrigger.create({
-            id: 'bird',
-            trigger: '.bird-box',
-            start: 'top top',
-            end: '+=2000',
-            animation: t2
-        })
-
-        ScrollTrigger.create({
-            trigger: '.bird',
-            start: 'center center',
-            end: '+=1000',
-            pin: true,
-            scrub: true,
-            animation: t3,
-        })
-    </script>
-    </script>
 </body>
 
 </html>

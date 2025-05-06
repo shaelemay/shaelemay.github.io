@@ -57,3 +57,49 @@ body{
 .box-note {
     position: relative;
 }
+
+.btn-left {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    height: 300px;
+    width: 400px;
+    z-index: 999;
+}
+
+.btn-right {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 300px;
+    width: 400px;
+    z-index: 999;
+}
+
+.btn-right #bttn {
+    display: flex;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.btn-left #bttn {
+    display: flex;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    text-decoration: none;
+}

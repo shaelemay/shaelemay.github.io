@@ -45,6 +45,7 @@
         <div class="line line4">
             That kept so many warm -
         </div>
+        </div>
         <div class="btn-left">
             <a href="/des342/proj1/main.html" id="bttn">Back</a>
         </div>
@@ -68,14 +69,15 @@
         var bird = document.getElementById('bird');
 
 
-        gsap.set('.bird', { opacity: 0, left: '40%', bottom: '20%', scale: 0.6, position: 'absolute', y: 3000, 'z-index': 4 });
+        gsap.set('.bird', { opacity: 0, left: '40%', bottom: '20%', scale: 0.6, position: 'absolute', y: 2900, 'z-index': 4 });
         gsap.set('.text', { autoAlpha: 1 })
         gsap.set('.note', { right: '10%', top: '5%', scale: 1.1, opacity: 1 })
         gsap.set('body', { 'margin-bottom': 300 })
         gsap.set('.storm-set', { position: 'absolute', y: 1300 })
         gsap.set('.bird-box', { position: 'absolute', y: 2000, height: 200 })
 
-        gsap.set(storm, { opacity: 0 })
+        gsap.set(storm, {'z-index': 2, opacity: 0, position: 'fixed' })
+        gsap.set(sunny, {'z-index': 1, position: 'fixed'})
 
         ScrollTrigger.defaults({
             markers: true,
@@ -90,6 +92,8 @@
         t1.to('.note', { opacity: 0 })
         t2.to('.bird', { opacity: 1 })
         t3.to('.bird', { scale: 1.2, y: 3400, x: 300 })
+        //t4.to(storm, {opacity:0})
+
 
         ScrollTrigger.create({
             id: 'storm-appear',
@@ -116,6 +120,14 @@
             scrub: true,
             animation: t3,
         })
+        // ScrollTrigger.create({
+        //     trigger: '.bird',
+        //     start: 'center center',
+        //     end: '+=1000',
+        //     pin: true,
+        //     scrub: true,
+        //     animation: t4,
+        // })
     </script>
     </script>
 </body>

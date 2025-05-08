@@ -14,15 +14,25 @@
 </head>
 
 <body>
-
-    <div class="background">        
+    <!-- BG -->
+    <div class="background">
         <img id="clouds" src="./assets/stormy.png" alt="">
         <img id="ice" src="./assets/snow.png" alt="">
         <img id="water" src="./assets/water.png" alt="">
         <img id="sunny" src="./assets/sunny-bg-full.png" alt="">
     </div>
+    <!-- Div for Water Foreground -->
     <div class="waterfg">
-    <div class="water-appear"></div></div>
+        <div class="water-appear"></div>
+    </div>
+    <!-- Div for Full Sunny Setting -->
+     <div class="sunbg">
+        <div class="sun-appear"></div>
+     </div>
+    <!-- Div for Bird/Hand -->
+     <div class="bird-appear"><div class="bird"></div>
+     </div>
+    <!-- Text -->
     <div class="text">
         <div class="line line1">
             I’ve heard it in the chillest land -
@@ -36,6 +46,8 @@
         <div class="line line4">
             It asked a crumb - of me.
         </div>
+    </div>
+    <!-- Navigation -->
         <div class="btn-left">
             <a href="/des342/proj1/versetwo.html" id="bttn">Back</a>
         </div>
@@ -51,21 +63,19 @@
         gsap.registerPlugin(ScrollTrigger);
 
         ScrollTrigger.defaults({
-            markers: true,
+            markers: true,            
+            scrub: true,
         })
+        /* Set Initial Background Styles */     
+        gsap.set('#ice', { opacity: 1, 'z-index': 4, position: 'fixed', bottom:'-300px' })
+        gsap.set('#water', { opacity: 0, 'z-index': 5, position: 'fixed', bottom: 0 })
+        gsap.set('#sunny', { opacity: 0, 'z-index': 6, position: 'fixed' })
+        gsap.set('#clouds', { opacity: 1, 'z-index': 2, position: 'fixed' })
 
-        gsap.set('#ice', {opacity: 1, 'z-index': 4, position: 'fixed'})
-        gsap.set('#water', {opacity: 0, 'z-index': 3, position: 'fixed'})
-        gsap.set('#sunny', {opacity: 0, 'z-index': 1, position: 'fixed'})
-        gsap.set('#clouds', {opacity: 1, 'z-index': 2, position: 'fixed'})
+        /* Transition Div Triggers */
+        gsap.set('.waterfg', { position: 'absolute', y: 1300 })
+        gsap.set('.sunbg', {position: 'absolute', y:3000})
 
-        
-        // let t1 = gsap.timeline();
-        // let t2 = gsap.timeline();
-        // let t3 = gsap.timeline();
-        // t1.to(storm, { opacity: 1 })
-        // t1.to('.note', { opacity: 0 })
-        // t2.to('.bird', { opacity: 1 })
         // t3.to('.bird', { scale: 1.2, y: 3400, x: 300 })
         // //t4.to(storm, {opacity:0})
 
@@ -74,6 +84,25 @@
         // Timeline 3: Bird Appear
 
         let t1 = gsap.timeline();
+        let t2 = gsap.timeline();
+        t1.to('#water', {opacity:1})
+        t2.to('#sunny', {opacity:1})
+
+        ScrollTrigger.create({
+            id: 'water-appear',
+            trigger: '.waterfg',
+            start: 'top bottom',
+            end: '+=1500',
+            animation: t1
+        })
+
+        ScrollTrigger.create({
+            id: 'sunny-appear',
+            trigger: '.sunbg',
+            start: 'top bottom',
+            end: "+=1500",
+            animation: t2
+        })
 
 
 

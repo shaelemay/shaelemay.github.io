@@ -49,10 +49,10 @@
         </div>
     </div>
     <div class="btn-left">
-        <a href="/des342/proj1/index.html" id="bttn">Back</a>
+        <a href="index.html" id="bttn">Back</a>
     </div>
     <div class="btn-right">
-        <a href="/des342/proj1/versethree.html" id="bttn">Next</a>
+        <a href="versethree.html" id="bttn">Next</a>
     </div>
     </div>
 
@@ -71,7 +71,7 @@
         var bird = document.getElementById('bird');
 
 
-        gsap.set('.bird', { opacity: 0, left: '40%', bottom: '20%', scale: 0.6, position: 'absolute', y: 2900, 'z-index': 4 });
+        gsap.set('.bird', { autoAlpha: 1, opacity: 0, left: '40%', bottom: '20%', scale: 0.6, position: 'absolute', y: 2900, 'z-index': 4 });
         gsap.set('.text', { autoAlpha: 1 })
         gsap.set('.note', { right: '10%', top: '5%', scale: 1.1, opacity: 1 })
         gsap.set('body', { 'margin-bottom': 300 })

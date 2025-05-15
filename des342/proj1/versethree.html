@@ -58,9 +58,7 @@
     <div class="btn-left">
         <a href="versetwo.html" id="bttn">Back</a>
     </div>
-    </div>
 
-    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -82,16 +80,15 @@
         /* Transition Div Triggers */
         gsap.set('.waterfg', { position: 'absolute', y: 1300 })
         gsap.set('.sunbg', { position: 'absolute', y: 3000 })
-        gsap.set('.bird-appear', { position: 'absolute', y: 3000,'z-index':10})
-
+        gsap.set('.bird-appear', { position: 'absolute', y: 3000, 'z-index': 10 })
 
         /* Invalid property postion set to absolute Missing plugin? gsap.registerPlugin() */
-        gsap.set('.human-appear', {postion: 'absolute', y: 4000,'z-index':9})
+        gsap.set('.human-appear', { y: 4000, 'z-index': 9 })
 
         /* Bird/Human Images and Text bg */
         gsap.set('#birdy', { position: 'absolute', opacity: 1, y: 0, x: 1000, scale: 0.6 })
-        gsap.set('#human', {position: 'absolute',opacity:1,x:700})
-        gsap.set('.text-bg', {position: 'sticky',opacity:1,y:350,x:-150,scale:0.8,'z-index':0})
+        gsap.set('#human', { postion: 'absolute', opacity: 1, x: 700 })
+        gsap.set('.text-bg', { position: 'sticky', opacity: 1, y: 350, x: -150, scale: 0.8, 'z-index': 0 })
 
         // Timeline 1: Ice to Water
         // Timeline 2: Full BG Appear

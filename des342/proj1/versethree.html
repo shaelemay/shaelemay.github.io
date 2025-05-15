@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Refresh" content="0; url='main.html'" />
+    <!-- <meta http-equiv="Refresh" content="0; url='main.html'" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,12 +27,17 @@
         <div class="water-appear"></div>
     </div>
     <!-- Div for Full Sunny Setting -->
-     <div class="sunbg">
+    <div class="sunbg">
         <div class="sun-appear"></div>
-     </div>
-    <!-- Div for Bird/Hand -->
-     <div class="bird-hand-appear"><div class="bird"></div>
-     </div>
+    </div>
+    <!-- Div for Bird -->
+    <div class="bird-appear">
+            <img id="birdy" src="./assets/bird-full.png">
+    </div>
+    <!-- Div for Human -->
+    <div class="human-appear">
+            <img id="human" src="./assets/human.png">
+    </div>
     <!-- Text -->
     <div class="text">
         <div class="line line1">
@@ -49,9 +54,9 @@
         </div>
     </div>
     <!-- Navigation -->
-        <div class="btn-left">
-            <a href="/des342/proj1/versetwo.html" id="bttn">Back</a>
-        </div>
+    <div class="btn-left">
+        <a href="/des342/proj1/versetwo.html" id="bttn">Back</a>
+    </div>
     </div>
 
     </script>
@@ -64,32 +69,32 @@
         gsap.registerPlugin(ScrollTrigger);
 
         ScrollTrigger.defaults({
-            markers: true,            
+            markers: true,
             scrub: true,
         })
-        /* Set Initial Background Styles */     
-        gsap.set('#ice', { opacity: 1, 'z-index': 4, position: 'fixed', bottom:'-300px' })
+        /* Set Initial Background Styles */
+        gsap.set('#ice', { opacity: 1, 'z-index': 4, position: 'fixed', bottom: '-300px' })
         gsap.set('#water', { opacity: 0, 'z-index': 5, position: 'fixed', bottom: 0 })
         gsap.set('#sunny', { opacity: 0, 'z-index': 6, position: 'fixed' })
         gsap.set('#clouds', { opacity: 1, 'z-index': 2, position: 'fixed' })
 
         /* Transition Div Triggers */
         gsap.set('.waterfg', { position: 'absolute', y: 1300 })
-        gsap.set('.sunbg', {position: 'absolute', y:3000})
-        gsap.set('.bird-hand-appear', {position: 'absolute', y:5000})
+        gsap.set('.sunbg', { position: 'absolute', y: 3000 })
+        gsap.set('.bird-appear', { position: 'absolute', y: 3000 })
 
-        // t3.to('.bird', { scale: 1.2, y: 3400, x: 300 })
-        // //t4.to(storm, {opacity:0})
+        /* Bird/Human Images */
+        gsap.set('#birdy', { position: 'absolute', opacity: 1, y: 0, x: 1000, scale: 0.6 })
 
         // Timeline 1: Ice to Water
         // Timeline 2: Full BG Appear
-        // Timeline 3: Bird Appear
+        // Timeline 3: Human
 
-        let t1 = gsap.timeline();
+        let t1 = gsap.timeline()
         let t2 = gsap.timeline();
-        t1.to('#water', {opacity:1})
-        t2.to('#sunny', {opacity:1})
-        t2.to('')
+        let t3 = gsap.timeline();
+        t1.to('#water', { opacity: 1 })
+        t2.to('#sunny', { opacity: 1 })
 
         ScrollTrigger.create({
             id: 'water-appear',
@@ -107,42 +112,14 @@
             animation: t2
         })
 
-
-
-        // ScrollTrigger.create({
-        //     id: 'storm-appear',
-        //     trigger: '.storm-set',
-        //     start: 'top bottom',
-        //     end: '+=800',
-        //     scrub: true,
-        //     animation: t1
-        // })
-
-        // ScrollTrigger.create({
-        //     id: 'bird',
-        //     trigger: '.bird-box',
-        //     start: 'top top',
-        //     end: '+=2000',
-        //     animation: t2
-        // })
-
-        // ScrollTrigger.create({
-        //     trigger: '.bird',
-        //     start: 'center center',
-        //     end: '+=1000',
-        //     pin: true,
-        //     scrub: true,
-        //     animation: t3,
-        // })
-        // // ScrollTrigger.create({
-        // //     trigger: '.bird',
-        // //     start: 'center center',
-        // //     end: '+=1000',
-        // //     pin: true,
-        // //     scrub: true,
-        // //     animation: t4,
-        // // })
-
+        ScrollTrigger.create({
+            id: 'bird-hand',
+            trigger: '.bird-appear',
+            start: 'top top',
+            end: "+=1000",
+            pin: true,
+            animation: t3
+        })
     </script>
 </body>
 

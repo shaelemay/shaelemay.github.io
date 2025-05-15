@@ -9,13 +9,14 @@ body{
     overflow-x:hidden;
 }
 .line {
-    font: 36px "Raleway", sans-serif;
+    font: 32px "Raleway", sans-serif;
     position: sticky;
 }
 
 .bird { 
     position: relative;
     z-index: 3;
+    visibility: hidden
 }
 
 .branch {

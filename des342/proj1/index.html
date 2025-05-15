@@ -59,21 +59,23 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set('.bird', { left: '40%', bottom: '20%', scale: 0.6 });
+        gsap.set('.bird', { autoAlpha:1, left: '40%', bottom: '20%', scale: 0.6 });
         gsap.set('.branch', { right: '-65vw', scale: 0.7, top: '35%' })
         gsap.set('.text', { autoAlpha: 1 })
         gsap.set('.note', { opacity: 0 })
         gsap.set('body', { 'margin-bottom': 300 })
-        gsap.set('.text-bg', {position: 'sticky',opacity:1,y:350,x:-150,scale:0.8,'z-index':0})
+        gsap.set('.text-bg', { autoAlpha:1,position: 'sticky',opacity:1,y:350,x:-150,scale:0.8,'z-index':0})
 
 
         ScrollTrigger.defaults({
             markers: true,
+            scrub: 0.5,
         })
 
         let tl = gsap.timeline();
 
         tl.to('.branch', { right: "-12vw"}, 1)
+        // Add keyframes timeline to better change when opacity setting does the thing  
         tl.to('.note', { opacity: 1, left: '3%', top: '0%', scale: 0.8, delay: 3, top: 50 }, 0)
         tl.to('.branch', { opacity: 0, delay: 4 }, 1)
         tl.to('.bird', { opacity: 0, delay: 4 }, 1)

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- <meta http-equiv="Refresh" content="0; url='main.html'" /> -->
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,7 @@
         <img src="./assets/sunny-bg-full.png" alt="">
     </div>
     <div class="text">
+        <img src="./assets/textbg.png" alt="" class="text-bg">
         <div class="line line1">
             "Hope" is the thing with feathers -
         </div>
@@ -62,6 +64,8 @@
         gsap.set('.text', { autoAlpha: 1 })
         gsap.set('.note', { opacity: 0 })
         gsap.set('body', { 'margin-bottom': 300 })
+        gsap.set('.text-bg', {position: 'sticky',opacity:1,y:350,x:-150,scale:0.8,'z-index':0})
+
 
         ScrollTrigger.defaults({
             markers: true,

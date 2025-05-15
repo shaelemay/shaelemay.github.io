@@ -34,6 +34,7 @@
         </div>
     </div>
     <div class="text">
+        <img src="./assets/textbg.png" alt="" class="text-bg">        
         <div class="line line1">
             And sweetest - in the Gale - is heard -
         </div>
@@ -76,6 +77,7 @@
         gsap.set('body', { 'margin-bottom': 300 })
         gsap.set('.storm-set', { position: 'absolute', y: 1300 })
         gsap.set('.bird-box', { position: 'absolute', y: 2000, height: 200 })
+        gsap.set('.text-bg', {position: 'sticky',opacity:1,y:350,x:-150,scale:0.8,'z-index':0})
 
         gsap.set(storm, { 'z-index': 2, opacity: 0, position: 'fixed' })
         gsap.set(sunny, { 'z-index': 1, position: 'fixed' })

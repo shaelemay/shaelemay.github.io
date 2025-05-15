@@ -32,14 +32,15 @@
     </div>
     <!-- Div for Bird -->
     <div class="bird-appear">
-            <img id="birdy" src="./assets/bird-full.png">
+        <img id="birdy" src="./assets/bird-full.png">
     </div>
     <!-- Div for Human -->
     <div class="human-appear">
-            <img id="human" src="./assets/human.png">
+        <img id="human" src="./assets/human.png">
     </div>
     <!-- Text -->
     <div class="text">
+        <img src="./assets/textbg.png" alt="" class="text-bg">
         <div class="line line1">
             I’ve heard it in the chillest land -
         </div>
@@ -81,10 +82,16 @@
         /* Transition Div Triggers */
         gsap.set('.waterfg', { position: 'absolute', y: 1300 })
         gsap.set('.sunbg', { position: 'absolute', y: 3000 })
-        gsap.set('.bird-appear', { position: 'absolute', y: 3000 })
+        gsap.set('.bird-appear', { position: 'absolute', y: 3000,'z-index':10})
 
-        /* Bird/Human Images */
+        
+        /* Invalid property postion set to absolute Missing plugin? gsap.registerPlugin() */
+        gsap.set('.human-appear', {postion: 'absolute', y: 4000,'z-index':9})
+
+        /* Bird/Human Images and Text bg */
         gsap.set('#birdy', { position: 'absolute', opacity: 1, y: 0, x: 1000, scale: 0.6 })
+        gsap.set('#human', {position: 'absolute',opacity:1,x:700})
+        gsap.set('.text-bg', {position: 'sticky',opacity:1,y:350,x:-150,scale:0.8,'z-index':0})
 
         // Timeline 1: Ice to Water
         // Timeline 2: Full BG Appear

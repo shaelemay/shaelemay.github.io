@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="0; url='main.html'" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +76,7 @@
         /* Transition Div Triggers */
         gsap.set('.waterfg', { position: 'absolute', y: 1300 })
         gsap.set('.sunbg', {position: 'absolute', y:3000})
+        gsap.set('.bird-hand-appear', {position: 'absolute', y:5000})
 
         // t3.to('.bird', { scale: 1.2, y: 3400, x: 300 })
         // //t4.to(storm, {opacity:0})
@@ -87,6 +89,7 @@
         let t2 = gsap.timeline();
         t1.to('#water', {opacity:1})
         t2.to('#sunny', {opacity:1})
+        t2.to('')
 
         ScrollTrigger.create({
             id: 'water-appear',

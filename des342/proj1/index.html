@@ -54,7 +54,6 @@
         <a href="versetwo.html" id="bttn">Next</a>
         </div>
 
-    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -73,7 +72,7 @@
 
 
         ScrollTrigger.defaults({
-            markers: true,
+            // markers:true,
             scrub: 0.5,
         })
 
@@ -87,14 +86,16 @@
         gsap.from('.bird', {
             scale: 0.4,
             y: -5,
+            bottom:'12%',
             scrollTrigger: {
                 id: 'bird',
+                markers: true,
+                
                 trigger: '.bird',
-                start: "top center",
-                end: '+=4800',
-                // end: "${window.innerHeight}",
                 pin: true,
-                pinSpacing: false,
+                start: "top center",
+                // end: '+=4800',
+                end: `${window.innerHeight}`,
             }
         })
         ScrollTrigger.create({

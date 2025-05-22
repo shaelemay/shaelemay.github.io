@@ -24,7 +24,7 @@ body{
 }
 
 .bird { 
-    position: relative;
+    position: fixed;
     z-index: 3;
     visibility: hidden;
 }

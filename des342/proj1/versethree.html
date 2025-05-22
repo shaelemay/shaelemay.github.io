@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap" rel="stylesheet">
+
     <!-- <meta http-equiv="Refresh" content="0; url='main.html'" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>"Hope"</title>
 </head>
@@ -86,9 +86,9 @@
         gsap.set('.human-appear', { y: 4000, 'z-index': 9 })
 
         /* Bird/Human Images and Text bg */
-        gsap.set('#birdy', { position: 'absolute', opacity: 1, y: 0, x: 1000, scale: 0.6 })
+        gsap.set('#birdy', { position: 'absolute', opacity: 1, y: 0, x: 1000, scale: 0.6, autoAlpha:1 })
         gsap.set('#human', { postion: 'absolute', opacity: 1, x: 700 })
-        gsap.set('.text-bg', { position: 'sticky', opacity: 1, y: 350, x: -150, scale: 0.8, 'z-index': 0 })
+        gsap.set('.text-bg', {autoAlpha:1, position: 'sticky', opacity: 1, y:340,x:-200,scale:0.65, 'z-index': 0 })
 
         // Timeline 1: Ice to Water
         // Timeline 2: Full BG Appear

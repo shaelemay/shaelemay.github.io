@@ -8,25 +8,35 @@
 body{
     overflow-x:hidden;
 }
+
+
+.playpen-sans-arabic {
+  font-family: "Playpen Sans Arabic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
 .line {
-    font: 32px "Raleway", sans-serif;
+    font: 24px "Playpen Sans Arabic";
     position: sticky;
+    color: #F3EFD4;
 }
 
 .bird { 
     position: relative;
     z-index: 3;
-    visibility: hidden
+    visibility: hidden;
 }
 
 .branch {
     position: fixed;
     z-index: 1;
+    visibility: hidden;
 }
 
 .note {
-    position:fixed;
-    x: 1000;
+
     z-index: 1;
     scale: 0.7;
 }
@@ -34,9 +44,12 @@ body{
 .text {
     position: fixed;
     z-index: 4;
-    
     left:10%;
     bottom:20%;
+}
+
+.text-bg {
+    visibility: hidden;
 }
 
 

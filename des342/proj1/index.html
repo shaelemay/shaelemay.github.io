@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-    <!-- <meta http-equiv="Refresh" content="0; url='main.html'" /> -->
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap"
+        rel="stylesheet">
 
     <title>"Hope"</title>
 </head>
@@ -52,7 +51,7 @@
     </div>
     <div class="btn-right">
         <a href="versetwo.html" id="bttn">Next</a>
-        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -62,13 +61,13 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set('.bird', { autoAlpha:1, left: '40%', bottom: '12%', scale: 0.6 });
-        gsap.set('.branch', { right: '-65vw', scale: 0.7, top: '35%', autoAlpha:1 })
+        gsap.set('.bird', { autoAlpha: 1, left: '40%', bottom: '12%', scale: 0.6 });
+        gsap.set('.branch', { right: '-65vw', scale: 0.7, top: '35%', autoAlpha: 1 })
         gsap.set('.text', { autoAlpha: 1 })
-        gsap.set('.note', { opacity: 0, y:3300, position:'absolute' })
-        gsap.set('body', { 'margin-bottom': 300, autoAlpha:1})
-        gsap.set('.text-bg', { autoAlpha:1,position: 'sticky',opacity:1,y:340,x:-200,scale:0.65,'z-index':0})
-        gsap.set('.branch-trigger', {y: 500})
+        gsap.set('.note', { opacity: 0, y: 3300, position: 'absolute' })
+        gsap.set('body', { 'margin-bottom': 300, autoAlpha: 1 })
+        gsap.set('.text-bg', { autoAlpha: 1, position: 'sticky', opacity: 1, y: 340, x: -200, scale: 0.65, 'z-index': 0 })
+        gsap.set('.branch-trigger', { y: 500 })
 
 
         ScrollTrigger.defaults({
@@ -78,19 +77,17 @@
 
         let tl = gsap.timeline();
         let t2 = gsap.timeline();
-        tl.to('.branch', { right: "-12vw"}, 1)
+        tl.to('.branch', { right: "-12vw" }, 1)
         // Add keyframes timeline to better change when opacity setting does the thing  
-        t2.to('.note', { opacity: 1}, 0)
+        t2.to('.note', { opacity: 1 }, 0)
         //t2.to('.branch', { opacity: 0, delay: 4 }, 1)
 
         gsap.from('.bird', {
             scale: 0.4,
             y: -5,
-            bottom:'12%',
             scrollTrigger: {
                 id: 'bird',
-                markers: true,
-                
+                // markers: true,
                 trigger: '.bird',
                 pin: true,
                 start: "top center",
@@ -112,10 +109,6 @@
             end: '+=800',
             animation: t2
         })
-
-
-
     </script>
 </body>
-
 </html>

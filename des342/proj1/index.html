@@ -81,7 +81,6 @@
         tl.to('.branch', { right: "-12vw" }, 1)
         // Add keyframes timeline to better change when opacity setting does the thing  
         t2.to('.note', { opacity: 1, x:50, scale:0.9 }, 0)
-        //t2.to('.branch', { opacity: 0, delay: 4 }, 1)
 
         gsap.from('.bird', {
             scale: 0.4,
@@ -90,14 +89,9 @@
             // position: 'relative',
             scrollTrigger: {
                 id: 'bird',
-                // markers: true,
                 trigger: '.bird',
-                // pin: true,
                 start: "top center",
-                // end: '+=4800',
-                // end: 'max',
                 end: `${window.innerHeight}`,
-                // onLeave: gsap.set('.bird',{position:'sticky'}),
             }
         })
         ScrollTrigger.create({

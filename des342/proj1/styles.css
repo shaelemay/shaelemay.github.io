@@ -102,3 +102,6 @@ body{
     border-radius: 15px;
     text-decoration: none;
 }
+.gsap-marker {
+    opacity: 0 !important;
+}

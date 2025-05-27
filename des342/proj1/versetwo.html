@@ -83,7 +83,7 @@
         gsap.set(sunny, { 'z-index': 1, position: 'fixed' })
 
         ScrollTrigger.defaults({
-            markers: true,
+            // markers: true,//
             scrub: true,
         })
 
@@ -104,7 +104,7 @@
             trigger: '.storm-set',
             start: 'top bottom',
             end: '+=800',
-            scrub: true,
+            // scrub: true,
             animation: t1
         })
 
@@ -120,19 +120,30 @@
             trigger: '.bird',
             start: 'center center',
             end: '+=1000',
-            pin: true,
-            scrub: true,
+            // pin: true,
+            // pinSpacing: false,
+            // scrub: true,
             animation: t3,
         })
+
+        // t4 = gsap.timeline();
+        // t4.to('.bird',{scale:1})
         // ScrollTrigger.create({
         //     trigger: '.bird',
-        //     start: 'center center',
-        //     end: '+=1000',
-        //     pin: true,
+        //     // start: 'bottom bottom',
+        //     start: 'bottom bottom',
+        //     end: 'bottom bottom',
+        //     // pin: true,
         //     scrub: true,
         //     animation: t4,
         // })
-    </script>
+        ScrollTrigger.create({
+            trigger: '.bird',           // The element to trigger the animation
+            start: "bottom+=100 bottom",  // Trigger when the bottom of the image hits the bottom of the viewport
+            end: "max",      // End the animation after a scroll distance (you can adjust this)
+            scrub: false,             // Scrub the animation with the scroll position
+            animation: gsap.to('.bird', { scale: 1, opacity: 1, duration: 0.5 }),  // Animation you want to trigger
+            });
     </script>
 </body>
 

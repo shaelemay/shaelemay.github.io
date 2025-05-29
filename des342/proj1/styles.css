@@ -9,6 +9,22 @@ body{
     overflow-x:hidden;
 }
 
+.bird {
+    position: fixed;
+    z-index: 3;
+    /* Remove or comment out visibility hidden */
+    /* visibility: hidden; */
+}
+
+
+
+.bird-box {
+    overflow: hidden; /* remove quotes */
+}
+/* 
+.bird-box {
+    overflow: 'hidden';
+} */
 
 .playpen-sans-arabic {
   font-family: "Playpen Sans Arabic", cursive;
@@ -22,12 +38,12 @@ body{
     position: sticky;
     color: #F3EFD4;
 }
-
+/* 
 .bird { 
     position: fixed;
     z-index: 3;
     visibility: hidden;
-}
+} */
 
 .branch {
     position: fixed;

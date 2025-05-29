@@ -3,60 +3,72 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap"
+        rel="stylesheet" />
 
-    <!-- <meta http-equiv="Refresh" content="0; url='main.html'" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
 
     <title>"Hope"</title>
+    <style>
+        /* Added these CSS fixes for bird positioning and size */
+        .bird {
+            position: fixed;
+            bottom: 0;
+            left: 70%;
+            /* Move to right */
+            transform-origin: top center;
+            /* transform: translateX(-50%) scale(3); */
+            /* keep translateX(-50%) to center the bird relative to left */
+            opacity: 0;
+            z-index: 10;
+            width: 150px;
+        }
+
+        .bird img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="background">
-        <img id="storm" src="./assets/stormy.png" alt="">
-        <img id="sunny" src="./assets/sunny.png" alt="">
-        <img id="lower" src="./assets/lower.png" alt="">
+        <img id="storm" src="./assets/stormy.png" alt="" />
+        <img id="sunny" src="./assets/sunny.png" alt="" />
+        <img id="lower" src="./assets/lower.png" alt="" />
     </div>
     <div class="stormybg">
         <div class="storm-set"></div>
         <div class="box-note">
             <div class="note">
-                <img src="./assets/notes.png" alt=""></img>
+                <img src="./assets/notes.png" alt="" />
+            </div>
+        </div></div>
+        <div class="bird-box">
+            <div class="bird">
+                <img src="./assets/bird-full.png" alt="Bird" />
             </div>
         </div>
-        <div class="bird-box"></div>
-        <div class="bird">
-            <img src="./assets/bird-full.png"></img>
+        <div class="text">
+            <img src="./assets/textbg.png" alt="" class="text-bg" />
+            <div class="line line1">And sweetest - in the Gale - is heard -</div>
+            <div class="line line2">And sore must be the storm -</div>
+            <div class="line line3">That could abash the little Bird</div>
+            <div class="line line4">That kept so many warm -</div>
         </div>
-    </div>
-    <div class="text">
-        <img src="./assets/textbg.png" alt="" class="text-bg">        
-        <div class="line line1">
-            And sweetest - in the Gale - is heard -
+        <div class="btn-left">
+            <a href="index.html" id="bttn">Back</a>
         </div>
-        <div class="line line2">
-            And sore must be the storm -
+        <div class="btn-right">
+            <a href="versethree.html" id="bttn">Next</a>
         </div>
-        <div class="line line3">
-            That could abash the little Bird
-        </div>
-        <div class="line line4">
-            That kept so many warm -
-        </div>
-    </div>
-    <div class="btn-left">
-        <a href="index.html" id="bttn">Back</a>
-    </div>
-    <div class="btn-right">
-        <a href="versethree.html" id="bttn">Next</a>
-    </div>
     </div>
 
-    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -65,85 +77,83 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        var storm = document.getElementById('storm');
-        var sunny = document.getElementById('sunny');
-        var lower = document.getElementById('lower');
-        var bird = document.getElementById('bird');
+        const storm = document.getElementById('storm');
+        const sunny = document.getElementById('sunny');
+        const lower = document.getElementById('lower');
 
+        // Fix: bird is selected by class because it has no id
+        const bird = document.querySelector('.bird');
 
-        gsap.set('.bird', { autoAlpha: 1, opacity: 0, left: '40%', bottom: '20%', scale: 0.6, position: 'absolute', y: 2900, 'z-index': 4 });
-        gsap.set('.text', { autoAlpha: 1 })
-        gsap.set('.note', { right: '10%', top: '5%', scale: 0.7, opacity: 1 })
-        gsap.set('body', { 'margin-bottom': 300 })
-        gsap.set('.storm-set', { position: 'absolute', y: 1300 })
-        gsap.set('.bird-box', { position: 'absolute', y: 2000, height: 200 })
-        gsap.set('.text-bg', {autoAlpha:1,position: 'sticky',opacity:1,y:340,x:-200,scale:0.65,'z-index':0})
-
-        gsap.set(storm, { 'z-index': 2, opacity: 0, position: 'fixed' })
-        gsap.set(sunny, { 'z-index': 1, position: 'fixed' })
+        // Initial setups
+        gsap.set('.text', { autoAlpha: 1 });
+        gsap.set('.note', { right: '10%', top: '5%', scale: 0.7, opacity: 1 });
+        gsap.set('body', { 'margin-bottom': 800 });
+        gsap.set('.storm-set', { position: 'absolute', y: 1300 });
+        gsap.set('.bird-box', { position: 'relative', y: 2400, height: 800, width: '100vw' });
+        gsap.set('.text-bg', { autoAlpha: 1, position: 'sticky', opacity: 1, y: 340, x: -200, scale: 0.65, 'z-index': 0 });
+        // gsap.set('.bird', { opacity: 0, y: -800, x: 0, transformOrigin: "top center" });
+        gsap.set(storm, { 'z-index': 2, opacity: 0, position: 'fixed' });
+        gsap.set(sunny, { 'z-index': 1, position: 'fixed' });
+        gsap.set('.bird', {
+            opacity: 0,
+            y: 0,
+            xPercent: -50, // to mimic translateX(-50%)
+            scale: 3,
+            transformOrigin: "top center"
+        });
+        
 
         ScrollTrigger.defaults({
-            // markers: true,//
             scrub: true,
-        })
+            // markers: true, // uncomment to debug triggers
+        });
 
-
-
+        // Timeline for storm fade in and note fade out
         let t1 = gsap.timeline();
-        let t2 = gsap.timeline();
-        let t3 = gsap.timeline();
-        t1.to(storm, { opacity: 1 })
-        t1.to('.note', { opacity: 0 })
-        t2.to('.bird', { opacity: 1 })
-        t3.to('.bird', { scale: 1.2, y: 3400, x: 300 })
-        //t4.to(storm, {opacity:0})
+        t1.to(storm, { opacity: 1 });
+        t1.to('.note', { opacity: 0 }, "<"); // "<" means start at same time as previous
 
+        // // Timeline for bird fade in and scale up + move down visually
+        // let t2 = gsap.timeline();
+        // t2.to(bird, {
+        //     opacity: 1,
+        //     scale: 1,
+        //     y: 100, // pushes bird visually 100px down without affecting layout
+        //     ease: "power1.out"
+        // });
+
+        let t2 = gsap.timeline();
+        t2.to('.bird', {
+            opacity: 1,
+            y: -300,
+            ease: "power1.out"
+        });
+        t2.to('.bird', {
+            scale: 10,
+            y: -500,
+            ease: "power1.out",
+            duration: 4,
+        }, "+=1");  // reduced delay from 10 to 1 for testing
+        // ScrollTriggers
 
         ScrollTrigger.create({
             id: 'storm-appear',
             trigger: '.storm-set',
             start: 'top bottom',
             end: '+=800',
-            // scrub: true,
             animation: t1
-        })
+        });
 
         ScrollTrigger.create({
-            id: 'bird',
+            id: 'bird-appear',
             trigger: '.bird-box',
-            start: 'top top',
-            end: '+=2000',
+            start: 'top bottom',
+            end: '+=1800',
             animation: t2
-        })
+        });
 
-        ScrollTrigger.create({
-            trigger: '.bird',
-            start: 'center center',
-            end: '+=1000',
-            // pin: true,
-            // pinSpacing: false,
-            // scrub: true,
-            animation: t3,
-        })
+        // Optional: add more bird animations on scroll if needed
 
-        // t4 = gsap.timeline();
-        // t4.to('.bird',{scale:1})
-        // ScrollTrigger.create({
-        //     trigger: '.bird',
-        //     // start: 'bottom bottom',
-        //     start: 'bottom bottom',
-        //     end: 'bottom bottom',
-        //     // pin: true,
-        //     scrub: true,
-        //     animation: t4,
-        // })
-        ScrollTrigger.create({
-            trigger: '.bird',           // The element to trigger the animation
-            start: "bottom+=100 bottom",  // Trigger when the bottom of the image hits the bottom of the viewport
-            end: "max",      // End the animation after a scroll distance (you can adjust this)
-            scrub: false,             // Scrub the animation with the scroll position
-            animation: gsap.to('.bird', { scale: 1, opacity: 1, duration: 0.5 }),  // Animation you want to trigger
-            });
     </script>
 </body>
 
